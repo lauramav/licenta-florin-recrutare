@@ -6,6 +6,12 @@ import java.util.Set;
 @Entity
 @Table(name = "role")
 public class Role {
+	
+	public static final String EMPLOYEE = "employee";
+	public static final String COMPANY = "company";
+	public static final String ADMIN = "admin";
+			
+	
     private Long id;
     private String name;
     private Set<User> users;

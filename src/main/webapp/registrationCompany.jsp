@@ -55,9 +55,6 @@
             </div>
         </spring:bind>
         
-        
-        <input type="hidden" name="role" value="company"/>
-        
         <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
     </form:form>
 

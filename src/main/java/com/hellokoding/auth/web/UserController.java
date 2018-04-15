@@ -1,9 +1,11 @@
 package com.hellokoding.auth.web;
 
+import com.hellokoding.auth.model.Role;
 import com.hellokoding.auth.model.User;
 import com.hellokoding.auth.service.SecurityService;
 import com.hellokoding.auth.service.UserService;
 import com.hellokoding.auth.validator.UserValidator;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -38,7 +40,7 @@ public class UserController {
             return "registration";
         }
 
-        userService.save(userForm);
+        userService.save(userForm, Role.EMPLOYEE);
 
         securityService.autologin(userForm.getUsername(), userForm.getPasswordConfirm());
 
@@ -83,7 +85,7 @@ public class UserController {
             return "registrationCompany";
         }
 
-        userService.save(userForm);
+        userService.save(userForm, Role.COMPANY);
 
         securityService.autologin(userForm.getUsername(), userForm.getPasswordConfirm());
 
