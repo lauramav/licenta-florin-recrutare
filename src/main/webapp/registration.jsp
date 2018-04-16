@@ -16,6 +16,28 @@
 
     <title>Create an account</title>
 
+		 <!-- Bootstrap core CSS *CA IN INDEX.html -->
+    <link href="resources/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/normalize.css">
+    <link rel="stylesheet" href="resources/css/component.css">
+    <link rel="stylesheet" href="resources/css/custom-styles.css">
+    <link rel="stylesheet" href="resources/css/font-awesome.css">
+	
+     
+	 <link rel="stylesheet" href="resources/css/demo.css">
+    <link rel="stylesheet" href="resources/css/font-awesome-ie7.css">
+	
+	 <script src="resources/js/jquery.mobilemenu.js"></script>
+      <script src="resources/js/html5shiv.js"></script>
+      <script src="resources/js/respond.min.js"></script>
+      <script>
+    $(document).ready(function(){
+        $('.menu').mobileMenu();
+    });
+  </script>
+	<!-- *CA IN INDEX.html -->
+	
+	
     <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
     <link href="${contextPath}/resources/css/common.css" rel="stylesheet">
 
@@ -28,8 +50,30 @@
 
 <body>
 
+<div class="header-wrapper">
+      <div class="site-name">
+        <h1>Ctrl Alt Job</h1>
+        <h2>Give yourself the best chance!</h2>
+      </div>
+    </div>
+	 <div class="ruler"></div>
+	 
 <div class="container">
-
+<div class="featured-block">
+        <!-- Example row of columns -->
+        <div class="row">
+		 <div class="col-md-6">
+            <div class="block">
+              <img src="resources/img/loginCompany.jpg" alt="" class="img-spacing thumbnail">
+              <h1>Why choose to use our recruiting service? </h1>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. lentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin  laoreet viverra.
+              </p>
+              <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis.
+              </p>
+            
+            </div>            
+          </div>
+          <div class="col-md-6">
     <form:form method="POST" modelAttribute="userForm" class="form-signin">
         <h2 class="form-signin-heading">Create your account</h2>
         <spring:bind path="username">
@@ -57,7 +101,9 @@
         
         <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
     </form:form>
-
+</div>
+</div>
+</div>
 </div>
 <!-- /container -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

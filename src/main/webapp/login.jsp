@@ -55,7 +55,7 @@
         <h2>Give yourself the best chance!</h2>
       </div>
     </div>
-	
+	 <div class="ruler"></div>
 <div class="container">
 
     <form method="POST" action="${contextPath}/login" class="form-signin">

@@ -14,7 +14,7 @@
     <meta name="description" content="">
     <meta name="author" content="Gavrila Florin">
 
-    <title>Log in with your account</title>
+    <title>Company Login</title>
 
 	 <!-- Bootstrap core CSS *CA IN INDEX.html -->
     <link href="resources/css/bootstrap.css" rel="stylesheet">
@@ -55,7 +55,7 @@
         <h2>Give yourself the best chance!</h2>
       </div>
     </div>
-	
+	 <div class="ruler"></div>
 <div class="container">
 
     <form method="POST" action="${contextPath}/loginCompany" class="form-signin">

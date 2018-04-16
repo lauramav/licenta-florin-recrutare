@@ -74,7 +74,7 @@
 /************************************************
 	Global styles starts here
  ************************************************/
-body{background: #e6e6e6; color: #888888; font-size: 14px; line-height: 24px;}
+body{background: #e6e6e6; color: #404040; font-size: 14px; line-height: 24px;}
 h1, h2, h3, h4, h5, h6{margin: 0;}
 h1{}
 h2{}
@@ -93,12 +93,12 @@ p{padding-bottom: 25px; margin: 0;}
 .header-wrapper{overflow: hidden; text-align: center; background: #fff; padding-top: 60px; padding-bottom: 40px;}
 .site-name{display: inline-block;}
 .site-name h1{margin: 0; font-size: 44px; color: #34b091; font-family: 'source_sans_probold'; text-transform: uppercase; letter-spacing: 2px;}
-.site-name h2{font-size: 18px; line-height: 24px; color: #cac8c8; font-family: 'source_sans_prolight';}
+.site-name h2{font-size: 18px; line-height: 24px; color: #404040; font-family: 'source_sans_prolight';}
 .menu{text-align: center; background: #34b091; height: 52px;}
 .navbar{display: inline-block; margin-bottom: 0;}
 
 .navbar-nav > li > a{color: #fff; font-size: 16px; background-image: none; border: none; font-family: 'source_sans_probold'; text-transform: uppercase; padding: 15px 0px; padding-right: 40px;}
-.navbar-nav > li > a:hover{color: #888888; background: none;}
+.navbar-nav > li > a:hover{color: #404040; background: none;}
 
 .mini-menu{display: none;}
     .mini-menu .selectnav{display: none; width: 100%;background: #3b3e4a;font-weight: 600;padding: 10px;height: 42px; color: #fff; border-radius: 5px; cursor: pointer; outline: 0; border:none !important;}
@@ -131,7 +131,7 @@ p{padding-bottom: 25px; margin: 0;}
 
 .banner{}
 .banner .carousel-caption{top: 25%;}
-.banner .carousel-caption h1{margin: 0; font-size: 60px;font-family: 'source_sans_probold'; color: #fff; letter-spacing: 5px; text-transform: uppercase; padding-bottom: 20px;}
+.banner .carousel-caption h1{margin: 0; font-size: 50px;font-family: 'source_sans_probold'; color: #fff; letter-spacing: 5px; text-transform: uppercase; padding-bottom: 20px;}
 .banner .carousel-caption h2{font-size: 28px; line-height: 36px;font-family: 'source_sans_prolight'; color: #fff; letter-spacing: 3px; padding-bottom: 20px;}
 .banner .carousel-caption .btn{color: #fff; font-size: 22px; line-height: 28px; font-family: 'source_sans_problack'; text-transform: uppercase; padding: 10px 25px; background: #34b091; border-radius: 40px; box-shadow: 0 3px 2px 0px #4a4c54; }
 .banner .carousel-caption .btn:hover{color: #34b091; background: #fff; transition:all 1s;}
@@ -157,7 +157,7 @@ p{padding-bottom: 25px; margin: 0;}
 .featured-block .block .thumbnail{box-shadow: 0 3px 3px 0 #e0e0e0;}
 .featured-block .caption{padding: 25px 15px;}
 .featured-block .caption h1{font-size: 18px; line-height: 24px;color: #34b091; text-transform: uppercase;font-family: 'source_sans_probold';  padding-bottom: 10px; letter-spacing: 1px;}
-.featured-block .caption p{font-size: 14px; line-height: 24px; color: #888888;font-family: 'source_sans_proregular';}
+.featured-block .caption p{font-size: 14px; line-height: 24px; color: #404040;font-family: 'source_sans_proregular';}
 .featured-block .caption .btn{color: #fff; background: #34b091; font-size: 12px; font-family: 'source_sans_problack'; border-radius: 30px; text-transform: uppercase; line-height: 13px;}
 .featured-block .caption .btn:hover{color: #fff; background: #454855; transition:all 1s;}
 

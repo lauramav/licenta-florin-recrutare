@@ -13,10 +13,23 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Create an account</title>
+    <title>Employee Dashboard</title>
 
     <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
-
+<!-- din admin index -->
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Responsive Admin</title>
+	<!-- BOOTSTRAP STYLES-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FONTAWESOME STYLES-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+        <!-- CUSTOM STYLES-->
+    <link href="assets/css/custom.css" rel="stylesheet" />
+     <!-- GOOGLE FONTS-->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+	<!-- ##din admin index -->
+	
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -24,6 +37,13 @@
     <![endif]-->
 </head>
 <body>
+
+<div class="header-wrapper">
+      <div class="site-name">
+        <h1>Ctrl Alt Job</h1>
+        <h2>Give yourself the best chance!</h2>
+      </div>
+    </div>
 <div class="container">
 
     <c:if test="${pageContext.request.userPrincipal.name != null}">
