@@ -25,7 +25,7 @@ public class WebSecurityConfigCompany extends WebSecurityConfigurerAdapter {
         		.antMatcher("/company/**")
                 .authorizeRequests()
                     .antMatchers("/company/registration").permitAll()
-                    .anyRequest().authenticated()
+                    .anyRequest().hasAuthority("company")
                     .and()
                 .formLogin()
                     .loginPage("/company/login")

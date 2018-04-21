@@ -15,7 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class UserController {
+@RequestMapping("employee")
+public class EmployeeController {
 	
     @Autowired
     private UserService userService;
@@ -26,14 +27,14 @@ public class UserController {
     @Autowired
     private UserValidator userValidator;
 
-    @RequestMapping(value = "/employee/registration", method = RequestMethod.GET)
+    @RequestMapping(value = "registration", method = RequestMethod.GET)
     public String registration(Model model) {
         model.addAttribute("userForm", new User());
 
         return "/employee/registration";
     }
 
-    @RequestMapping(value = "/employee/registration", method = RequestMethod.POST)
+    @RequestMapping(value = "registration", method = RequestMethod.POST)
     public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult, Model model) {
         userValidator.validate(userForm, bindingResult);
 
@@ -48,7 +49,7 @@ public class UserController {
         return "redirect:/employee/welcome";
     }
 
-    @RequestMapping(value = "/employee/login", method = RequestMethod.GET)
+    @RequestMapping(value = "login", method = RequestMethod.GET)
     public String login(Model model, String error, String logout) {
         if (error != null)
             model.addAttribute("error", "Your username and password is invalid.");
@@ -60,52 +61,9 @@ public class UserController {
     }
     
   
-    @RequestMapping(value = {"/employee/welcome"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"welcome"}, method = RequestMethod.GET)
     public String welcome(Model model) {   	
         return "/employee/welcome";
     }
     
-    
-
-    ////////////////////////////////////////////////////////////////////////////////////
-    
-    
-    @RequestMapping(value = "/company/registration", method = RequestMethod.GET)
-    public String registrationCompany(Model model) {
-        model.addAttribute("userForm", new User());
-
-        return "/company/registration";
-    }
-    
-    
-    @RequestMapping(value = "/company/registration", method = RequestMethod.POST)
-    public String registrationCompany(@ModelAttribute("userForm") User userForm, BindingResult bindingResult, Model model) {
-        userValidator.validate(userForm, bindingResult);
-
-        if (bindingResult.hasErrors()) {
-            return "/company/registration";
-        }
-
-        userService.save(userForm, Role.COMPANY);
-
-        securityService.autologin(userForm.getUsername(), userForm.getPasswordConfirm());
-
-        return "redirect:/company/welcome";
-    }
-    
-    @RequestMapping(value = "/company/login", method = RequestMethod.GET)
-    public String loginCompany(Model model, String error, String logout) {
-        if (error != null)
-            model.addAttribute("error", "Your username and password is invalid.");
-
-        if (logout != null)
-            model.addAttribute("message", "You have been logged out successfully.");
-
-        return "/company/login";
-    }
-    
-    @RequestMapping(value = "/company/welcome", method = RequestMethod.GET)
-    public String welcomeCompany(Model model) {   	
-        return "/company/welcome";
-    } 
 }
