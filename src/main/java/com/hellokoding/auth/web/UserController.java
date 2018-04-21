@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class UserController {
+	
     @Autowired
     private UserService userService;
 
@@ -25,14 +26,14 @@ public class UserController {
     @Autowired
     private UserValidator userValidator;
 
-    @RequestMapping(value = "/registration", method = RequestMethod.GET)
+    @RequestMapping(value = "/employee/registration", method = RequestMethod.GET)
     public String registration(Model model) {
         model.addAttribute("userForm", new User());
 
-        return "registration";
+        return "/employee/registration";
     }
 
-    @RequestMapping(value = "/registration", method = RequestMethod.POST)
+    @RequestMapping(value = "/employee/registration", method = RequestMethod.POST)
     public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult, Model model) {
         userValidator.validate(userForm, bindingResult);
 
@@ -44,10 +45,10 @@ public class UserController {
 
         securityService.autologin(userForm.getUsername(), userForm.getPasswordConfirm());
 
-        return "redirect:/welcome";
+        return "redirect:/employee/welcome";
     }
 
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    @RequestMapping(value = "/employee/login", method = RequestMethod.GET)
     public String login(Model model, String error, String logout) {
         if (error != null)
             model.addAttribute("error", "Your username and password is invalid.");
@@ -55,13 +56,13 @@ public class UserController {
         if (logout != null)
             model.addAttribute("message", "You have been logged out successfully.");
 
-        return "login";
+        return "/employee/login";
     }
     
   
-    @RequestMapping(value = {"/","/welcome"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/employee/welcome"}, method = RequestMethod.GET)
     public String welcome(Model model) {   	
-        return "welcome";
+        return "/employee/welcome";
     }
     
     
@@ -69,30 +70,30 @@ public class UserController {
     ////////////////////////////////////////////////////////////////////////////////////
     
     
-    @RequestMapping(value = "/registrationCompany", method = RequestMethod.GET)
+    @RequestMapping(value = "/company/registration", method = RequestMethod.GET)
     public String registrationCompany(Model model) {
         model.addAttribute("userForm", new User());
 
-        return "registrationCompany";
+        return "/company/registration";
     }
     
     
-    @RequestMapping(value = "/registrationCompany", method = RequestMethod.POST)
+    @RequestMapping(value = "/company/registration", method = RequestMethod.POST)
     public String registrationCompany(@ModelAttribute("userForm") User userForm, BindingResult bindingResult, Model model) {
         userValidator.validate(userForm, bindingResult);
 
         if (bindingResult.hasErrors()) {
-            return "registrationCompany";
+            return "/company/registration";
         }
 
         userService.save(userForm, Role.COMPANY);
 
         securityService.autologin(userForm.getUsername(), userForm.getPasswordConfirm());
 
-        return "redirect:/welcomeCompany";
+        return "redirect:/company/welcome";
     }
     
-    @RequestMapping(value = "/loginCompany", method = RequestMethod.GET)
+    @RequestMapping(value = "/company/login", method = RequestMethod.GET)
     public String loginCompany(Model model, String error, String logout) {
         if (error != null)
             model.addAttribute("error", "Your username and password is invalid.");
@@ -100,11 +101,11 @@ public class UserController {
         if (logout != null)
             model.addAttribute("message", "You have been logged out successfully.");
 
-        return "loginCompany";
+        return "/company/login";
     }
     
-//    @RequestMapping(value = "/welcomeCompany", method = RequestMethod.GET)
-//    public String welcomeCompany(Model model) {   	
-//        return "welcomeCompany";
-//    } 
+    @RequestMapping(value = "/company/welcome", method = RequestMethod.GET)
+    public String welcomeCompany(Model model) {   	
+        return "/company/welcome";
+    } 
 }
