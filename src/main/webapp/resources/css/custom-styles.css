@@ -100,35 +100,6 @@ p{padding-bottom: 25px; margin: 0;}
 .navbar-nav > li > a{color: #fff; font-size: 16px; background-image: none; border: none; font-family: 'source_sans_probold'; text-transform: uppercase; padding: 15px 0px; padding-right: 40px;}
 .navbar-nav > li > a:hover{color: #404040; background: none;}
 
-.mini-menu{display: none;}
-    .mini-menu .selectnav{display: none; width: 100%;background: #3b3e4a;font-weight: 600;padding: 10px;height: 42px; color: #fff; border-radius: 5px; cursor: pointer; outline: 0; border:none !important;}
-    .selectnav select{appearance: none; border:none !important;}
-    .mini-menu label {position:relative; width: 100%;}
-    .mini-menu label:after {
-    content:'<>';
-    font:11px "Consolas", monospace;
-    color:#fff;
-    -webkit-transform:rotate(90deg);
-    -moz-transform:rotate(90deg);
-    -ms-transform:rotate(90deg);
-    transform:rotate(90deg);
-    right:14px; top:14px;
-    padding:0 0 2px;
-
-    position:absolute;
-    pointer-events:none;
-    }
-    .mini-menu label:before {
-    content:'';
-    right:6px; top:10px;
-    width: 25px; height: 25px;
-    background:#3b3e4a;
-    position:absolute;
-    pointer-events:none;
-    display:block;
-    }
-
-
 .banner{}
 .banner .carousel-caption{top: 25%;}
 .banner .carousel-caption h1{margin: 0; font-size: 50px;font-family: 'source_sans_probold'; color: #fff; letter-spacing: 5px; text-transform: uppercase; padding-bottom: 20px;}
