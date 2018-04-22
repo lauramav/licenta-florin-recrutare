@@ -17,19 +17,19 @@
     <title>Company Login</title>
 
 	 <!-- Bootstrap core CSS *CA IN INDEX.html -->
-    <link href="resources/css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="resources/css/normalize.css">
-    <link rel="stylesheet" href="resources/css/component.css">
-    <link rel="stylesheet" href="resources/css/custom-styles.css">
-    <link rel="stylesheet" href="resources/css/font-awesome.css">
+    <link href="../resources/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../resources/css/normalize.css">
+    <link rel="stylesheet" href="../resources/css/component.css">
+    <link rel="stylesheet" href="../resources/css/custom-styles.css">
+    <link rel="stylesheet" href="../resources/css/font-awesome.css">
 	
      
-	 <link rel="stylesheet" href="resources/css/demo.css">
-    <link rel="stylesheet" href="resources/css/font-awesome-ie7.css">
+	 <link rel="stylesheet" href="../resources/css/demo.css">
+    <link rel="stylesheet" href="../resources/css/font-awesome-ie7.css">
 	
-	 <script src="resources/js/jquery.mobilemenu.js"></script>
-      <script src="resources/js/html5shiv.js"></script>
-      <script src="resources/js/respond.min.js"></script>
+	 <script src="../resources/js/jquery.mobilemenu.js"></script>
+      <script src="../resources/js/html5shiv.js"></script>
+      <script src="../resources/js/respond.min.js"></script>
       <script>
     $(document).ready(function(){
         $('.menu').mobileMenu();
@@ -58,7 +58,7 @@
 	 <div class="ruler"></div>
 <div class="container">
 
-    <form method="POST" action="${contextPath}/loginCompany" class="form-signin">
+    <form method="POST" action="${contextPath}/company/login" class="form-signin">
         <h2 class="form-heading">Log in</h2>
 
         <div class="form-group ${error != null ? 'has-error' : ''}">
@@ -70,7 +70,7 @@
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 
             <button class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
-            <h4 class="text-center"><a href="${contextPath}/registrationCompany">Create an account</a></h4>
+            <h4 class="text-center"><a href="${contextPath}/company/registration">Create an account</a></h4>
         </div>
 
     </form>
