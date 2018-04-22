@@ -27,16 +27,8 @@
 	 <link rel="stylesheet" href="../resources/css/demo.css">
     <link rel="stylesheet" href="../resources/css/font-awesome-ie7.css">
 	
-	 <script src="../resources/js/jquery.mobilemenu.js"></script>
       <script src="../resources/js/html5shiv.js"></script>
       <script src="../resources/js/respond.min.js"></script>
-      <script>
-    $(document).ready(function(){
-        $('.menu').mobileMenu();
-    });
-  </script>
-	<!-- *CA IN INDEX.html -->
-	
 
     <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
     <link href="${contextPath}/resources/css/common.css" rel="stylesheet">
@@ -64,7 +56,7 @@
         <div class="row">
 		 <div class="col-md-6">
             <div class="block">
-              <img src="resources/img/loginCompany.jpg" alt="" class="img-spacing thumbnail">
+              <img src="../resources/img/loginCompany.jpg" alt="" class="img-spacing thumbnail">
               <h1>Why choose to use our recruiting service? </h1>
               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. lentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin  laoreet viverra.
               </p>

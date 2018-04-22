@@ -56,7 +56,7 @@ public class CompanyController {
             model.addAttribute("error", "Your username and password is invalid.");
 
         if (logout != null)
-            model.addAttribute("message", "You have been logged out successfully.");
+        	return "redirect:/resources/index.html";
 
         return "/company/login";
     }

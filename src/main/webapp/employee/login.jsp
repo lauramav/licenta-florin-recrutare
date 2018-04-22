@@ -27,16 +27,8 @@
 	 <link rel="stylesheet" href="../resources/css/demo.css">
     <link rel="stylesheet" href="../resources/css/font-awesome-ie7.css">
 	
-	 <script src="../resources/js/jquery.mobilemenu.js"></script>
       <script src="../resources/js/html5shiv.js"></script>
       <script src="../resources/js/respond.min.js"></script>
-      <script>
-    $(document).ready(function(){
-        $('.menu').mobileMenu();
-    });
-  </script>
-	<!-- *CA IN INDEX.html -->
-	
 	
     <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
     <link href="${contextPath}/resources/css/common.css" rel="stylesheet">
