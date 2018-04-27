@@ -324,13 +324,13 @@ textarea {
 }
 
 a {
-  color: #428bca;
+  color: #34b091;
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: #2a6496;
+  color: #34b091;
   text-decoration: underline;
 }
 
@@ -1579,7 +1579,7 @@ table th[class*="col-"] {
   .selectnav{display: block !important;}
   .menu{height: auto !important; padding-top: 5px !important;}
   .navbar-nav{margin-bottom: 0 !important;}
-  .nav > li{background: #454855!important; margin-bottom: 5px !important; color: #fff !important; }
+  .nav > li{background: #ccd0e1 !important; margin-bottom: 5px !important; color: #fff !important; }
   .nav > li:hover{background: #fff !important; }
   .nav > li >a{padding: 12px !important;}
   .nav > li >a:hover{color: #454855 !important;}
@@ -4580,7 +4580,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse .navbar-toggle .icon-bar {
-  background-color: #ffffff;
+  background-color: #34b091;
 }
 
 .navbar-inverse .navbar-collapse,

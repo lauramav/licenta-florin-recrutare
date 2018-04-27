@@ -90,9 +90,9 @@ p{padding-bottom: 25px; margin: 0;}
 /************************************************
 	Menu styles starts here
  ************************************************/
-.header-wrapper{overflow: hidden; text-align: center; background: #fff; padding-top: 60px; padding-bottom: 40px;}
+.header-wrapper{overflow: hidden; text-align: center; background: #fff; padding-top: 45px; padding-bottom: 30px;}
 .site-name{display: inline-block;}
-.site-name h1{margin: 0; font-size: 44px; color: #34b091; font-family: 'source_sans_probold'; text-transform: uppercase; letter-spacing: 2px;}
+.site-name h1{margin: 20px; font-size: 44px; color: #34b091; font-family: 'source_sans_probold'; text-transform: uppercase; letter-spacing: 2px;}
 .site-name h2{font-size: 18px; line-height: 24px; color: #404040; font-family: 'source_sans_prolight';}
 .menu{text-align: center; background: #34b091; height: 52px;}
 .navbar{display: inline-block; margin-bottom: 0;}

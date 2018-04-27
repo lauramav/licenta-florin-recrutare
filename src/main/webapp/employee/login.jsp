@@ -31,17 +31,31 @@
       <script src="../resources/js/html5shiv.js"></script>
       <script src="../resources/js/respond.min.js"></script>
 	
-    <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
-    <link href="${contextPath}/resources/css/common.css" rel="stylesheet">
+    <link href="../resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../resources/css/common.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+	
+	<!--aici am facut verificarea daca este un account loginat cand tu vrei sa dai login.
+	daca da il deschide pe acela si iti ofera sansa sa log out-->
+	<c:if test="${pageContext.request.userPrincipal.name != null}">
+	<c:redirect url = "http://localhost:8080/employee/welcome"/>
+	</c:if>
+	
+	
 </head>
 
 <body>
 
+<div class="navbar navbar-inverse navbar-fixed-top" style="padding-top: 10px; padding-left: 10px">
+	 <a href="http://localhost:8080/resources/index.html"></i>Back</a>
+</div>  
+
+               
+				
 <div class="header-wrapper">
       <div class="site-name">
         <h1>Ctrl Alt Job</h1>

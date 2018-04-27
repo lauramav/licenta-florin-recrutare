@@ -16,11 +16,9 @@
     <title>Employee Dashboard</title>
 
 
-    <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../resources/css/bootstrap.min.css" rel="stylesheet">
 <!-- din admin index -->
-	<meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Responsive Admin</title>
+    <title>Dashboard</title>
 	<!-- BOOTSTRAP STYLES-->
     <link href="../resources/assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
@@ -47,7 +45,7 @@
 
 <div class="header-wrapper">
       <div class="site-name">
-        <h1>Ctrl Alt Job</h1>
+      <h1>Ctrl Alt Job</h1>
         <h2>Give yourself the best chance!</h2>
       </div>
     </div>
@@ -56,14 +54,14 @@
 
  <div id="wrapper">
          <div class="navbar navbar-inverse navbar-fixed-top">
-		  <span class="logout-spn" >
+				<span class="logout-spn" align=right>
                   <div class="container">
 				    <c:if test="${pageContext.request.userPrincipal.name != null}">
 				        <form id="logoutForm" method="POST" action="${contextPath}/employee/logout">
 				            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 				        </form>
 				
-				        <h2>Welcome angajatule${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()">Logout</a></h2>
+				        <a onclick="document.forms['logoutForm'].submit()">Logout</a>
 				
 				    </c:if>
 				  </div>  
@@ -72,16 +70,13 @@
 		
             <div class="adjust-nav">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse" style="left: 10px;">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
 						
-                    <a class="navbar-brand" href="#">
-                       
-
-                    </a>
+                   
                    
                 </div>
               
@@ -144,7 +139,8 @@
                 <div class="row">
                     <div class="col-lg-12 ">
                         <div class="alert alert-info">
-                             <strong>Welcome Jhon Doe ! </strong> You Have No pending Task For Today.
+						
+                             <strong>Welcome ${pageContext.request.userPrincipal.name} ! </strong> You Have No pending Task For Today.
                         </div>
                        
                     </div>
@@ -153,9 +149,10 @@
                             <div class="row text-center pad-top">
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       <div class="div-square">
-                           <a href="blank.html" >
- <i class="fa fa-circle-o-notch fa-5x"></i>
-                      <h4>Check Data</h4>
+                           <a href="http://localhost:8080/resources/index.html" >
+						  			   
+ <i class="fa fa-home fa-5x"></i>
+                      <h4>Home</h4>
                       </a>
                       </div>
                      
@@ -509,6 +506,6 @@
     <script src="../resources/assets/js/custom.js"></script>
     
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="${contextPath}/resources/js/bootstrap.min.js"></script>
+<script src="../resources/js/bootstrap.min.js"></script>
 </body>
 </html>

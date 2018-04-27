@@ -42,7 +42,9 @@
 </head>
 
 <body>
-
+<div class="navbar navbar-inverse navbar-fixed-top" style="padding-top: 10px; padding-left: 10px">
+	 <a href="http://localhost:8080/resources/index.html"></i>Back</a>
+</div> 
 <div class="header-wrapper">
       <div class="site-name">
         <h1>Ctrl Alt Job</h1>
