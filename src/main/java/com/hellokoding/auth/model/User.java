@@ -7,6 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
@@ -18,6 +19,7 @@ public class User {
     private String password;
     private String passwordConfirm;
     private Role role;
+    private EmployeeCV employeeCV;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -63,4 +65,13 @@ public class User {
     public void setRole(Role role) {
         this.role = role;
     }
+
+    @OneToOne(mappedBy = "user")
+	public EmployeeCV getEmployeeCV() {
+		return employeeCV;
+	}
+
+	public void setEmployeeCV(EmployeeCV employeeCV) {
+		this.employeeCV = employeeCV;
+	}
 }
