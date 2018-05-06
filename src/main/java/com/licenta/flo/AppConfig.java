@@ -1,4 +1,4 @@
-package com.hellokoding.auth;
+package com.licenta.flo;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

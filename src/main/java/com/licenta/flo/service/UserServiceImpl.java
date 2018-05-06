@@ -1,12 +1,12 @@
-package com.hellokoding.auth.service;
+package com.licenta.flo.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.hellokoding.auth.model.User;
-import com.hellokoding.auth.repository.RoleRepository;
-import com.hellokoding.auth.repository.UserRepository;
+import com.licenta.flo.model.User;
+import com.licenta.flo.repository.RoleRepository;
+import com.licenta.flo.repository.UserRepository;
 
 @Service
 public class UserServiceImpl implements UserService {

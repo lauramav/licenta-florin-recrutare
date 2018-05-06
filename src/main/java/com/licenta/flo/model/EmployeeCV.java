@@ -1,4 +1,4 @@
-package com.hellokoding.auth.model;
+package com.licenta.flo.model;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;

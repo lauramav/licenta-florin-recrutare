@@ -122,61 +122,48 @@
 					</div>
 				</div>
 
-				<form:form method="POST" modelAttribute="cvForm">
+				<form:form method="POST" action="${contextPath}/employee/ui"
+					modelAttribute="cvForm">
 					<spring:bind path="name">
-						<div class="form-group">
-							<form:input type="text" path="name" class="form-control"
-								placeholder="Prenume" autofocus="true"></form:input>
-						</div>
+						<form:input type="text" path="name" class="form-control"
+							placeholder="Prenume"></form:input>
 					</spring:bind>
-					
+
 					<spring:bind path="surname">
-						<div class="form-group">
-							<form:input type="text" path="surname" class="form-control"
-								placeholder="Nume de familie" autofocus="true"></form:input>
-						</div>
+						<form:input type="text" path="surname" class="form-control"
+							placeholder="Nume de familie"></form:input>
 					</spring:bind>
-					
-					
+
+
 					<spring:bind path="age">
-						<div class="form-group">
-							<form:input type="text" path="age" class="form-control"
-								placeholder="Varsta" autofocus="true"></form:input>
-						</div>
+						<form:input type="number" path="age" class="form-control"
+							placeholder="Varsta"></form:input>
 					</spring:bind>
-					
-					
+
+
 					<spring:bind path="experience">
-						<div class="form-group">
-							<form:input type="text" path="experience" class="form-control"
-								placeholder="Ani experienta" autofocus="true"></form:input>
-						</div>
+						<form:input type="number" path="experience" class="form-control"
+							placeholder="Ani experienta"></form:input>
 					</spring:bind>
-					
-					
+
+
 					<spring:bind path="wanted">
-						<div class="form-group">
-							<form:input type="text" path="wanted" class="form-control"
-								placeholder="Job cautat" autofocus="true"></form:input>
-						</div>
+						<form:input type="text" path="wanted" class="form-control"
+							placeholder="Job cautat"></form:input>
 					</spring:bind>
-					
-					
+
+
 					<spring:bind path="education">
-						<div class="form-group">
-							<form:input type="text" path="education" class="form-control"
-								placeholder="Studii" autofocus="true"></form:input>
-						</div>
+						<form:input type="text" path="education" class="form-control"
+							placeholder="Studii"></form:input>
 					</spring:bind>
-					
-					
+
+
 					<spring:bind path="current">
-						<div class="form-group">
-							<form:input type="text" path="current" class="form-control"
-								placeholder="Job curent" autofocus="true"></form:input>
-						</div>
+						<form:input type="text" path="current" class="form-control"
+							placeholder="Job curent"></form:input>
 					</spring:bind>
-					
+
 					<button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
 				</form:form>
 

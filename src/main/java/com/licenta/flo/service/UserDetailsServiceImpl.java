@@ -1,4 +1,4 @@
-package com.hellokoding.auth.service;
+package com.licenta.flo.service;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -12,8 +12,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.hellokoding.auth.model.User;
-import com.hellokoding.auth.repository.UserRepository;
+import com.licenta.flo.model.User;
+import com.licenta.flo.repository.UserRepository;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService{

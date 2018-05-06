@@ -1,7 +1,8 @@
-package com.hellokoding.auth;
+package com.licenta.flo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -10,8 +11,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Configuration
+@Order(1)
 @EnableWebSecurity
-public class WebSecurityConfigCompany extends WebSecurityConfigurerAdapter {
+public class WebSecurityConfigEmployee extends WebSecurityConfigurerAdapter {
 	
     @Autowired
     private UserDetailsService userDetailsService;
@@ -22,18 +24,18 @@ public class WebSecurityConfigCompany extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-        		.antMatcher("/company/**")
+        		.antMatcher("/employee/**")
                 .authorizeRequests()
-                    .antMatchers("/company/registration").permitAll()
-                    .anyRequest().hasAuthority("company")
+                    .antMatchers("/employee/registration").permitAll()
+                    .anyRequest().hasAuthority("employee")
                     .and()
                 .formLogin()
-                    .loginPage("/company/login")
-                    .defaultSuccessUrl("/company/welcome")
+                    .loginPage("/employee/login")
+                    .defaultSuccessUrl("/employee/welcome")
                     .permitAll()
                     .and()
                 .logout()
-                	.logoutUrl("/company/logout")
+                	.logoutUrl("/employee/logout")
                     .permitAll();
     }
 
@@ -41,5 +43,5 @@ public class WebSecurityConfigCompany extends WebSecurityConfigurerAdapter {
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder);
     }
-    
+   
 }
