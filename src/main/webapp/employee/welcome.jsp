@@ -98,7 +98,7 @@
                    
 
                     <li>
-                        <a href="${contextPath}/employee/ui.jsp"><i class="fa fa-edit "></i>My CV  </a>
+                        <a href="${contextPath}/employee/ui"><i class="fa fa-edit "></i>My CV  </a>
                     </li>
                     <li>
                         <a href="blank.html"><i class="fa fa-briefcase "></i>Find job  </a>
