@@ -123,7 +123,7 @@
 					</div>
 				</div>
 
-				<form:form method="POST" action="${contextPath}/employee/ui"
+				<form:form method="POST" action="${contextPath}/employee/mycvemployee"
 					modelAttribute="cvForm">
 					<spring:bind path="name">
 						<form:input type="text" path="name" class="form-control"
