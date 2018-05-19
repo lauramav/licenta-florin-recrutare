@@ -1,11 +1,14 @@
 package com.licenta.flo.model;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -20,6 +23,7 @@ public class User {
     private String passwordConfirm;
     private Role role;
     private EmployeeCV employeeCV;
+    private List<CompanyJobs> companyJobs;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -73,5 +77,14 @@ public class User {
 
 	public void setEmployeeCV(EmployeeCV employeeCV) {
 		this.employeeCV = employeeCV;
+	}
+
+	@ManyToMany(mappedBy = "user")
+	public List<CompanyJobs> getCompanyJobs() {
+		return companyJobs;
+	}
+
+	public void setCompanyJobs(List<CompanyJobs> companyJobs) {
+		this.companyJobs = companyJobs;
 	}
 }

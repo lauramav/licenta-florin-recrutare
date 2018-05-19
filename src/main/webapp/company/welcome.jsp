@@ -95,7 +95,7 @@
                    
 
                     <li>
-                        <a href="ui.html"><i class="fa fa-edit "></i>My CV  </a>
+                        <a href="${contextPath}/company/myjobscompany"><i class="fa fa-edit "></i>Posteaza Job</a>
                     </li>
                     <li>
                         <a href="blank.html"><i class="fa fa-briefcase "></i>Find job  </a>
@@ -158,9 +158,9 @@
                  
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       <div class="div-square">
-                           <a href="blank.html" >
- <i class="fa fa-envelope-o fa-5x"></i>
-                      <h4>Mail Box</h4>
+                           <a href="${contextPath}/company/myjobscompany" >
+ <i class="fa fa-edit fa-5x"></i>
+                      <h4>Posteaza Job</h4>
                       </a>
                       </div>
                      

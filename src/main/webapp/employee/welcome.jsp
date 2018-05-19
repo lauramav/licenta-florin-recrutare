@@ -98,7 +98,7 @@
                    
 
                     <li>
-                        <a href="${contextPath}/employee/mycvemployee"><i class="fa fa-edit "></i>My CV  </a>
+                        <a href="${contextPath}/employee/mycvemployee"><i class="fa fa-edit "></i>CV-ul meu </a>
                     </li>
                     <li>
                         <a href="blank.html"><i class="fa fa-briefcase "></i>Find job  </a>
@@ -163,7 +163,7 @@
                       <div class="div-square">
                            <a href="mycvemployee" >
  <i class="fa fa-edit fa-5x"></i>
-                      <h4>My Cv</h4>
+                      <h4>CV-ul meu</h4>
                       </a>
                       </div>
                      
