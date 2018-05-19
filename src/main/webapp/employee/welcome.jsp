@@ -106,10 +106,10 @@
 
 
                     <li>
-                        <a href="#"><i class="fa fa-qrcode "></i>My Link One</a>
+                        <a href="#"><i class="fa fa-question-circle "></i>FAQ</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-bar-chart-o"></i>My Link Two</a>
+                        <a href="#"><i class="fa fa-phone"></i>Contact us</a>
                     </li>
 
                     <li>
@@ -191,9 +191,9 @@
                   </div>
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       <div class="div-square">
-                           <a href="blank.html" >
- <i class="fa fa-key fa-5x"></i>
-                      <h4>Admin </h4>
+                           <a href="form.html" >
+ <i class="fa fa-phone fa-5x"></i>
+                      <h4>Contact us! </h4>
                       </a>
                       </div>
                      

@@ -119,51 +119,102 @@
 			<div id="page-inner">
 				<div class="row">
 					<div class="col-md-12">
-						<h2>My CV</h2>
+						<h2 style = "margin-bottom: 20px;">My CV</h2>
 					</div>
 				</div>
-
+				
+				
+				<div class="row" style = "margin-bottom: 10px;">
+					<div class="col-md-3">
+						<label for="name">Name:</label>
+					</div>
+					<div class="col-md-5">
 				<form:form method="POST" action="${contextPath}/employee/mycvemployee"
 					modelAttribute="cvForm">
 					<spring:bind path="name">
 						<form:input type="text" path="name" class="form-control"
 							placeholder="Prenume"></form:input>
 					</spring:bind>
-
+					</div>
+				</div>
+				
+				
+				<div class="row" style = "margin-bottom: 10px;">
+					<div class="col-md-3">
+						<label for="surname">Surname:</label>
+					</div>
+					<div class="col-md-5">
 					<spring:bind path="surname">
 						<form:input type="text" path="surname" class="form-control"
 							placeholder="Nume de familie"></form:input>
 					</spring:bind>
+					</div>
+				</div>
 
 
+				<div class="row" style = "margin-bottom: 10px;">
+					<div class="col-md-3">
+						<label for="age">Age:</label>
+					</div>
+					<div class="col-md-5">				
 					<spring:bind path="age">
 						<form:input type="number" path="age" class="form-control"
 							placeholder="Varsta"></form:input>
 					</spring:bind>
-
-
+					</div>
+				</div>
+				
+				
+				<div class="row" style = "margin-bottom: 10px;">
+					<div class="col-md-3">
+						<label for="experience">Years of Experience:</label>
+					</div>
+					<div class="col-md-5">
 					<spring:bind path="experience">
 						<form:input type="number" path="experience" class="form-control"
 							placeholder="Ani experienta"></form:input>
 					</spring:bind>
-
-
+					</div>
+				</div>
+				
+				<div class="row" style = "margin-bottom: 10px;">
+					<div class="col-md-3">
+						<label for="wanted">Job Wanted:</label>
+					</div>
+					<div class="col-md-5">
+				
 					<spring:bind path="wanted">
 						<form:input type="text" path="wanted" class="form-control"
 							placeholder="Job cautat"></form:input>
 					</spring:bind>
-
-
+					</div>
+				</div>
+	
+	
+				<div class="row" style = "margin-bottom: 10px;">
+					<div class="col-md-3">
+						<label for="education">Studies:</label>
+					</div>
+					<div class="col-md-5">
 					<spring:bind path="education">
 						<form:input type="text" path="education" class="form-control"
 							placeholder="Studii"></form:input>
 					</spring:bind>
+					</div>
+				</div>
 
-
+				<div class="row" style = "margin-bottom: 10px;">
+					<div class="col-md-3">
+						<label for="current">Current Job:</label>
+					</div>
+					<div class="col-md-5">
 					<spring:bind path="current">
 						<form:input type="text" path="current" class="form-control"
 							placeholder="Job curent"></form:input>
 					</spring:bind>
+					</div>
+				</div>
+					
 
 					<button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
 				</form:form>
