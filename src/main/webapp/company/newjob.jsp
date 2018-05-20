@@ -13,7 +13,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>My CV</title>
+<title>New Job</title>
 
 
 <link href="../resources/css/bootstrap.min.css" rel="stylesheet">
@@ -97,9 +97,8 @@
 							class="fa fa-desktop "></i>Dashboard </a></li>
 
 
-					<li><a href="mycv"><i class="fa fa-edit "></i>My CV </a></li>
-					<li><a href="blank.html"><i class="fa fa-briefcase "></i>Find
-							job </a></li>
+					<li><a href="${contextPath}/company/newjob"><i class="fa fa-edit "></i>Post a new job </a></li>
+					<li><a href="${contextPath}/company/myjobs"><i class="fa fa-briefcase "></i>My posted jobs </a></li>
 
 
 					<li><a href="#"><i class="fa fa-qrcode "></i>My Link One</a></li>
@@ -123,16 +122,16 @@
 					</div>
 				</div>
 
-				<form:form method="POST" action="${contextPath}/company/myjobscompany"
+				<form:form method="POST" action="${contextPath}/company/newjob"
 					modelAttribute="jobForm">
 					<spring:bind path="title">
 						<form:input type="text" path="title" class="form-control"
-							placeholder="Titlu job"></form:input>
+							placeholder="Job Title"></form:input>
 					</spring:bind>
 
 					<spring:bind path="description">
 						<form:input type="text" path="description" class="form-control"
-							placeholder="Descriere job"></form:input>
+							placeholder="Job Description"></form:input>
 					</spring:bind>
 
 					<button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>

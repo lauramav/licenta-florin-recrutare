@@ -48,7 +48,7 @@ public class CompanyJobs {
 	}
 	
 	@ManyToOne
-	@JoinTable(name = "company_job", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "company_jobs_id"))
+	@JoinTable(name = "company_job", joinColumns = @JoinColumn(name = "company_jobs_id"), inverseJoinColumns = @JoinColumn(name = "user_id"))
 	public User getUser() {
 		return user;
 	}

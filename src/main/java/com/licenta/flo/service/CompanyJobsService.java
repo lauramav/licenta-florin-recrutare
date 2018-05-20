@@ -1,5 +1,7 @@
 package com.licenta.flo.service;
 
+import java.util.List;
+
 import com.licenta.flo.model.CompanyJobs;
 import com.licenta.flo.model.User;
 
@@ -8,5 +10,5 @@ public interface CompanyJobsService {
 
 	CompanyJobs findByTitle(String title);
 
-	CompanyJobs findByUser(User user);
+	List<CompanyJobs> findByUser(User user);
 }

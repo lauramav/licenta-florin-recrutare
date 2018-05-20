@@ -163,7 +163,7 @@
                       <div class="div-square">
                            <a href="mycvemployee" >
  <i class="fa fa-edit fa-5x"></i>
-                      <h4>CV-ul meu</h4>
+                      <h4>My CV</h4>
                       </a>
                       </div>
                      

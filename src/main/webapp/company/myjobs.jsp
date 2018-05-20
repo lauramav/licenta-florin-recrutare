@@ -1,6 +1,6 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
@@ -13,7 +13,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>My CV</title>
+<title>My posted jobs</title>
 
 
 <link href="../resources/css/bootstrap.min.css" rel="stylesheet">
@@ -97,9 +97,8 @@
 							class="fa fa-desktop "></i>Dashboard </a></li>
 
 
-					<li><a href="mycv"><i class="fa fa-edit "></i>My CV </a></li>
-					<li><a href="blank.html"><i class="fa fa-briefcase "></i>Find
-							job </a></li>
+					<li><a href="${contextPath}/company/newjob"><i class="fa fa-edit "></i>Post a new job </a></li>
+					<li><a href="${contextPath}/company/myjobs"><i class="fa fa-briefcase "></i>My posted jobs </a></li>
 
 
 					<li><a href="#"><i class="fa fa-qrcode "></i>My Link One</a></li>
@@ -119,105 +118,17 @@
 			<div id="page-inner">
 				<div class="row">
 					<div class="col-md-12">
-						<h2 style = "margin-bottom: 20px;">My CV</h2>
-					</div>
-				</div>
-				
-				
-				<div class="row" style = "margin-bottom: 10px;">
-					<div class="col-md-3">
-						<label for="name">Name:</label>
-					</div>
-					<div class="col-md-5">
-				<form:form method="POST" action="${contextPath}/employee/mycvemployee"
-					modelAttribute="cvForm">
-					<spring:bind path="name">
-						<form:input type="text" path="name" class="form-control"
-							placeholder="Name"></form:input>
-					</spring:bind>
-					</div>
-				</div>
-				
-				
-				<div class="row" style = "margin-bottom: 10px;">
-					<div class="col-md-3">
-						<label for="surname">Surname:</label>
-					</div>
-					<div class="col-md-5">
-					<spring:bind path="surname">
-						<form:input type="text" path="surname" class="form-control"
-							placeholder="Surname"></form:input>
-					</spring:bind>
+						<h2>My posted jobs</h2>
 					</div>
 				</div>
 
-
-				<div class="row" style = "margin-bottom: 10px;">
-					<div class="col-md-3">
-						<label for="age">Age:</label>
-					</div>
-					<div class="col-md-5">				
-					<spring:bind path="age">
-						<form:input type="number" path="age" class="form-control"
-							placeholder="Age"></form:input>
-					</spring:bind>
-					</div>
-				</div>
-				
-				
-				<div class="row" style = "margin-bottom: 10px;">
-					<div class="col-md-3">
-						<label for="experience">Years of Experience:</label>
-					</div>
-					<div class="col-md-5">
-					<spring:bind path="experience">
-						<form:input type="number" path="experience" class="form-control"
-							placeholder="Years of experience"></form:input>
-					</spring:bind>
-					</div>
-				</div>
-				
-				<div class="row" style = "margin-bottom: 10px;">
-					<div class="col-md-3">
-						<label for="wanted">Job Wanted:</label>
-					</div>
-					<div class="col-md-5">
-				
-					<spring:bind path="wanted">
-						<form:input type="text" path="wanted" class="form-control"
-							placeholder="Wanted job"></form:input>
-					</spring:bind>
-					</div>
-				</div>
-	
-	
-				<div class="row" style = "margin-bottom: 10px;">
-					<div class="col-md-3">
-						<label for="education">Studies:</label>
-					</div>
-					<div class="col-md-5">
-					<spring:bind path="education">
-						<form:input type="text" path="education" class="form-control"
-							placeholder="Studies"></form:input>
-					</spring:bind>
-					</div>
-				</div>
-
-				<div class="row" style = "margin-bottom: 10px;">
-					<div class="col-md-3">
-						<label for="current">Current Job:</label>
-					</div>
-					<div class="col-md-5">
-					<spring:bind path="current">
-						<form:input type="text" path="current" class="form-control"
-							placeholder="Current job"></form:input>
-					</spring:bind>
-					</div>
-				</div>
-					
-
-					<button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
-				</form:form>
+				<ul>
+					<c:forEach var="listValue" items="${listOfJobs}">
+						<li>${listValue.jobTitle}</li>
+						<li>${listValue.jobDescription}</li>
+						<li>.........</li>
+					</c:forEach>
+				</ul>
 
 			</div>
 		</div>

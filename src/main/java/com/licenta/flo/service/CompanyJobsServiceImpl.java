@@ -1,5 +1,7 @@
 package com.licenta.flo.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,7 +27,7 @@ public class CompanyJobsServiceImpl implements CompanyJobsService {
 	}
 
 	@Override
-	public CompanyJobs findByUser(User user) {
+	public List<CompanyJobs> findByUser(User user) {
 		return companyJobsRepositories.findByUser(user);
 	}
 

@@ -95,10 +95,10 @@
                    
 
                     <li>
-                        <a href="${contextPath}/company/myjobscompany"><i class="fa fa-edit "></i>Posteaza Job</a>
+                        <a href="${contextPath}/company/newjob"><i class="fa fa-edit "></i>Post a new job</a>
                     </li>
                     <li>
-                        <a href="blank.html"><i class="fa fa-briefcase "></i>Find job  </a>
+                        <a href="${contextPath}/company/myjobs"><i class="fa fa-briefcase "></i>My posted jobs  </a>
                     </li>
 
 
@@ -128,7 +128,7 @@
             <div id="page-inner">
                 <div class="row">
                     <div class="col-lg-12">
-                     <h2>Employee Dashboard</h2>   
+                     <h2>Cpmpany Dashboard</h2>   
                     </div>
                 </div>              
                  <!-- /. ROW  -->
@@ -158,9 +158,9 @@
                  
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       <div class="div-square">
-                           <a href="${contextPath}/company/myjobscompany" >
+                           <a href="${contextPath}/company/newjob" >
  <i class="fa fa-edit fa-5x"></i>
-                      <h4>Posteaza Job</h4>
+                      <h4>Post a new Job</h4>
                       </a>
                       </div>
                      
