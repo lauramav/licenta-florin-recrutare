@@ -43,6 +43,8 @@
 </head>
 <body>
 
+ 
+
 <div class="header-wrapper">
       <div class="site-name">
       <h1>Ctrl Alt Job</h1>
@@ -54,6 +56,12 @@
 
  <div id="wrapper">
          <div class="navbar navbar-inverse navbar-fixed-top">
+         
+         <font size="5" >
+          <a href="http://localhost:8080/resources/index.html" style="margin-left: 20px;">Back</a>
+        
+          </font>
+          
 				<span class="logout-spn" align=right>
                   <div class="container">
 				    <c:if test="${pageContext.request.userPrincipal.name != null}">
@@ -67,6 +75,9 @@
 				  </div>  
 
                 </span>
+            
+			
+
 		
             <div class="adjust-nav">
                 <div class="navbar-header">
@@ -75,7 +86,9 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-						
+					
+					 
+
                    
                    
                 </div>

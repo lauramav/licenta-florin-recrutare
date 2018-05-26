@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.licenta.flo.model.CompanyJobs;
 import com.licenta.flo.model.User;
 import com.licenta.flo.service.CompanyJobsService;
@@ -40,12 +39,33 @@ public class CompanyJobsController {
 	}
 
 	@RequestMapping(value = "company/newjob", method = RequestMethod.POST)
-	public String createCV(@ModelAttribute("cvForm") CompanyJobs jobForm, BindingResult bindingResult,
+	public String createJob(CompanyJobs jobForm, BindingResult bindingResult,
 			Model model) {
 		jobForm.setUser(getUser());
 		companyJobsService.save(jobForm);
 
 		return "redirect:/company/newjob";
+	}
+	
+	
+	@RequestMapping(value = "company/editjob", method = RequestMethod.GET)
+	public String editJob(Model model) {
+		model.addAttribute("jobForm", this.companyJobsService.findByTitle("titlu job"));
+
+		return "/company/editjob";
+	}
+	
+	@RequestMapping(value = "company/editjob", method = RequestMethod.POST)
+	public String editJob(@ModelAttribute("jobForm") CompanyJobs jobForm, BindingResult bindingResult,
+			Model model) {
+		companyJobsService.save(jobForm);
+
+		return "redirect:/company/myjobs";
+	}
+	
+	@ModelAttribute("jobForm")
+	public CompanyJobs getJobForm() {
+		return this.companyJobsService.findByTitle("titlu job");
 	}
 
 	private User getUser() {
