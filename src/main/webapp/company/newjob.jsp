@@ -58,7 +58,7 @@
 	<div id="wrapper">
 		<div class="navbar navbar-inverse navbar-fixed-top">
 		
-		<font size="5" >
+		<font size="4" >
           <a href="http://localhost:8080/resources/index.html" style="margin-left: 20px;">Back</a>
         
           </font>
@@ -110,7 +110,7 @@
 					<li><a href="${contextPath}/company/myjobs"><i class="fa fa-briefcase "></i>My posted jobs </a></li>
 
 
-					<li><a href="#"><i class="fa fa-qrcode "></i>My Link One</a></li>
+					<li><a href="FAQ.html"><i class="fa fa-question-circle "></i>FAQ</a></li>
 					<li><a href="#"><i class="fa fa-bar-chart-o"></i>My Link
 							Two</a></li>
 
@@ -127,7 +127,7 @@
 			<div id="page-inner">
 				<div class="row">
 					<div class="col-md-12">
-						<h2>My CV</h2>
+						<h2 style="margin-bottom: 20px;">Post a New Job</h2>
 					</div>
 				</div>
 
@@ -135,15 +135,16 @@
 					modelAttribute="jobForm">
 					<spring:bind path="title">
 						<form:input type="text" path="title" class="form-control"
-							placeholder="Job Title"></form:input>
+							placeholder="Job Title" style="margin-bottom: 10px ;"></form:input>
 					</spring:bind>
 
 					<spring:bind path="description">
-						<form:input type="text" path="description" class="form-control"
-							placeholder="Job Description"></form:input>
+				
+						<form:input type="text" rows="3" path="description" class="form-control"
+							placeholder="Job Description" style="margin-bottom: 20px;"></form:input>
 					</spring:bind>
 
-					<button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+					<button class="btn btn-lg btn-primary btn-block" type="submit" >Submit</button>
 				</form:form>
 
 			</div>

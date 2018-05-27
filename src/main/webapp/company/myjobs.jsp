@@ -58,7 +58,7 @@
 	<div id="wrapper">
 		<div class="navbar navbar-inverse navbar-fixed-top">
 
-			<font size="5"> <a
+			<font size="4"> <a
 				href="http://localhost:8080/resources/index.html"
 				style="margin-left: 20px;">Back</a>
 
@@ -111,7 +111,7 @@
 							class="fa fa-briefcase "></i>My posted jobs </a></li>
 
 
-					<li><a href="#"><i class="fa fa-qrcode "></i>My Link One</a></li>
+					<li><a href="FAQ.html"><i class="fa fa-question-circle "></i>FAQ</a></li>
 					<li><a href="#"><i class="fa fa-bar-chart-o"></i>My Link
 							Two</a></li>
 

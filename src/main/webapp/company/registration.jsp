@@ -59,7 +59,7 @@
         <div class="row">
 		 <div class="col-md-6">
             <div class="block">
-              <img src="../resources/img/loginCompany.jpg" alt="" class="img-spacing thumbnail">
+              <img src="../resources/img/loginCompany.png" alt="" class="img-spacing thumbnail">
               <h1>Why choose to use our recruiting service? </h1>
               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. lentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin  laoreet viverra.
               </p>

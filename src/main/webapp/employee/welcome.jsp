@@ -57,7 +57,7 @@
  <div id="wrapper">
          <div class="navbar navbar-inverse navbar-fixed-top">
          
-         <font size="5" >
+         <font size="4" >
           <a href="http://localhost:8080/resources/index.html" style="margin-left: 20px;">Back</a>
         
           </font>
@@ -111,7 +111,7 @@
                    
 
                     <li>
-                        <a href="${contextPath}/employee/mycvemployee"><i class="fa fa-edit "></i>CV-ul meu </a>
+                        <a href="${contextPath}/employee/mycvemployee"><i class="fa fa-edit "></i>My CV </a>
                     </li>
                     <li>
                         <a href="blank.html"><i class="fa fa-briefcase "></i>Find job  </a>
@@ -119,7 +119,7 @@
 
 
                     <li>
-                        <a href="#"><i class="fa fa-question-circle "></i>FAQ</a>
+                        <a href="FAQ.html"><i class="fa fa-question-circle "></i>FAQ</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-phone"></i>Contact us</a>
