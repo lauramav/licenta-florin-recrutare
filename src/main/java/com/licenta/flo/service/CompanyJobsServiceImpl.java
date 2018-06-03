@@ -20,6 +20,11 @@ public class CompanyJobsServiceImpl implements CompanyJobsService {
 	public void save(CompanyJobs companyJobs) {
 		companyJobsRepositories.save(companyJobs);
 	}
+	
+	@Override
+	public CompanyJobs findById(Long id) {
+		return companyJobsRepositories.findById(id);
+	}
 
 	@Override
 	public CompanyJobs findByTitle(String title) {
@@ -29,6 +34,11 @@ public class CompanyJobsServiceImpl implements CompanyJobsService {
 	@Override
 	public List<CompanyJobs> findByUser(User user) {
 		return companyJobsRepositories.findByUser(user);
+	}
+	
+	@Override
+	public void delete(Long id) {
+		companyJobsRepositories.delete(findById(id));
 	}
 
 }

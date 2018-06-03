@@ -161,15 +161,13 @@
 
 												<td><p data-placement="top" data-toggle="tooltip"
 														title="Edit">
-														<button class="btn btn-primary btn-xs" href="${contextPath}/company/editjob" data-title="Edit"
-															data-toggle="modal" data-target="#edit">
+														<button class="btn btn-primary btn-xs edit-btn" data-title="Edit" data-href="${contextPath}/company/editjob/${listValue.jobId}">
 															<span class="glyphicon glyphicon-pencil"></span>
 														</button>
 													</p></td>
 												<td><p data-placement="top" data-toggle="tooltip"
 														title="Delete">
-														<button class="btn btn-danger btn-xs" data-title="Delete"
-															data-toggle="modal" data-target="#delete">
+														<button class="btn btn-danger btn-xs delete-btn" data-title="Delete" data-id="${listValue.jobId}">
 															<span class="glyphicon glyphicon-trash"></span>
 														</button>
 													</p></td>
@@ -215,25 +213,20 @@
 
 
 							<div class="modal-body">
-								<form:form method="POST" action="${contextPath}/company/editjob"
-									modelAttribute="jobForm">
-									<spring:bind path="title">
-										<div class="form-group">
-											<form:input type="text" path="title" class="form-control"></form:input>
-										</div>
-									</spring:bind>
-									<spring:bind path="description">
-										<div class="form-group">
-											<form:input type="text" path="description"
-												class="form-control"></form:input>
-										</div>
-									</spring:bind>
+								<form id="edit-form" method="POST" action="${contextPath}/company/editjob">
+									<input name="id" type="hidden"></input>
+									<div class="form-group">
+										<input name="title" type="text" class="form-control"></input> 
+									</div>
+									<div class="form-group">
+										<input name="description" type="text" class="form-control"></input>
+									</div>
 									<div class="modal-footer ">
 										<button type="submit" class="btn btn-warning btn-lg"
 											style="width: 100%;">
 											<span class="glyphicon glyphicon-ok-sign"></span> Update</button>
 									</div>
-								</form:form>
+								</form>
 							</div>
 
 
@@ -268,9 +261,12 @@
 
 							</div>
 							<div class="modal-footer ">
-								<button type="button" class="btn btn-success">
-									<span class="glyphicon glyphicon-ok-sign"></span> Yes
-								</button>
+								<form id="delete-form" method="POST" action="${contextPath}/company/deletejob">
+									<input name="id" type="hidden"></input>
+									<button type="submit" class="btn btn-success">
+										<span class="glyphicon glyphicon-ok-sign"></span> Yes
+									</button>
+								</form>
 								<button type="button" class="btn btn-default"
 									data-dismiss="modal">
 									<span class="glyphicon glyphicon-remove"></span> No
@@ -304,6 +300,26 @@
 	<script src="../resources/assets/js/bootstrap.min.js"></script>
 	<!-- CUSTOM SCRIPTS -->
 	<script src="../resources/assets/js/custom.js"></script>
+	
+
+	<script>
+	$('.edit-btn').on('click',function(){
+		var dataURL = $(this).attr('data-href');
+		$.getJSON(dataURL, function(data) {
+			    for (var key in data) {
+			        $('#edit-form :input[name="'+key+'"]').val(data[key]);
+			    }
+			  	$('#edit').modal({show:true});
+			});
+	});
+	
+	$('.delete-btn').on('click',function(){
+		var id = $(this).attr('data-id');
+		$('#delete-form :input[name="id"]').val(id);
+		$('#delete').modal({show:true});
+	});
+	</script>
+
 
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

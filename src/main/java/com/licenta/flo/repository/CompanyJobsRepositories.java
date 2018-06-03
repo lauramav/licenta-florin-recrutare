@@ -9,6 +9,9 @@ import com.licenta.flo.model.User;
 
 public interface CompanyJobsRepositories extends
 		JpaRepository<CompanyJobs, Long> {
+	
+	CompanyJobs findById(Long id);
+	
 	CompanyJobs findByTitle(String title);
 
 	List<CompanyJobs> findByUser(User user);

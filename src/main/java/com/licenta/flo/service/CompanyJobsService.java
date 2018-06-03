@@ -7,8 +7,12 @@ import com.licenta.flo.model.User;
 
 public interface CompanyJobsService {
 	void save(CompanyJobs companyJobs);
+	
+	CompanyJobs findById(Long id);
 
 	CompanyJobs findByTitle(String title);
 
 	List<CompanyJobs> findByUser(User user);
+
+	void delete(Long id);
 }

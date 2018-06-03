@@ -21,7 +21,7 @@ public class WebSecurityConfigCompany extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http
+        http.csrf().disable()
         		.antMatcher("/company/**")
                 .authorizeRequests()
                     .antMatchers("/company/registration").permitAll()
