@@ -28,20 +28,15 @@ public class EmployeeCVController {
 
 	@RequestMapping(value = "employee/mycvemployee", method = RequestMethod.GET)
 	public String createOrEditCV(Model model) {
-		EmployeeCV employeeCV = employeeCVService.findByUser(getUser());
-
-		if (employeeCV != null) {
-			model.addAttribute("cvForm", employeeCV);
-		} else {
-			model.addAttribute("cvForm", new EmployeeCV());
-		}
+		EmployeeCV employeeCV = getCvForm();
+		model.addAttribute("cvForm", employeeCV);
 
 		return "/employee/mycvemployee";
 	}
 
 	@RequestMapping(value = "employee/mycvemployee", method = RequestMethod.POST)
-	public String createOrEditCV(@ModelAttribute("cvForm") EmployeeCV cvForm, BindingResult bindingResult,
-			Model model) {
+	public String createOrEditCV(@ModelAttribute("cvForm") EmployeeCV cvForm,
+			BindingResult bindingResult, Model model) {
 		cvForm.setUser(getUser());
 		employeeCVService.save(cvForm);
 
@@ -50,7 +45,14 @@ public class EmployeeCVController {
 
 	@ModelAttribute("cvForm")
 	public EmployeeCV getCvForm() {
-		return this.employeeCVService.findByUser(getUser());
+		EmployeeCV employeeCV = employeeCVService.findByUser(getUser());
+
+		if (employeeCV != null) {
+			return employeeCV;
+		} else {
+			return new EmployeeCV();
+		}
+
 	}
 
 	private User getUser() {
