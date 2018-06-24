@@ -221,6 +221,18 @@
 					</div>
 				</div>
 				
+				<div class="row" style = "margin-bottom: 10px;">
+					<div class="col-md-3">
+						<label for="email">Email:</label>
+					</div>
+					<div class="col-md-5">
+					<spring:bind path="email">
+						<form:input type="text" path="email" class="form-control"
+							placeholder="Email"></form:input>
+					</spring:bind>
+					</div>
+				</div>
+				
 					<button class="btn btn-lg btn-primary btn-block" type="submit">Apply</button>
 				</form:form>
 

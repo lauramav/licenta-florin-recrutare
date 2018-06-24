@@ -124,36 +124,40 @@
 					<div class="row">
 
 
-						<div class="col-md-10">
+						<div class="col-md-12">
 							<div class="table-responsive">
 
 								<table id="mytable" class="table table-bordred table-striped">
 
 									<thead>
-										<th>Title</th>
-										<th>Description</th>
-										<th>Edit</th>
-										<th>Delete</th>
+										<th>Name</th>
+										<th>Surname</th>
+										<th>Age</th>
+										<th>Experience</th>
+										<th>Wanted</th>
+										<th>Education</th>
+										<th>Current</th>
+										<th>Email</th>
 									</thead>
 									<tbody>
 
-										<c:forEach var="listValue" items="${listOfJobs}">
+										<c:forEach var="employee" items="${employees}">
 
 											<tr>
 
-												<td>${listValue.jobTitle}</td>
-												<td>${listValue.jobDescription}</td>
+												<td>${employee.name}</td>
+												<td>${employee.surname}</td>
+												<td>${employee.age}</td>
+												<td>${employee.experience}</td>
+												<td>${employee.wanted}</td>
+												<td>${employee.education}</td>
+												<td>${employee.current}</td>
+												<td>${employee.email}</td>
 
 												<td><p data-placement="top" data-toggle="tooltip"
 														title="Edit">
-														<button class="btn btn-primary btn-xs edit-btn" data-title="Edit" data-href="${contextPath}/company/editjob/${listValue.jobId}">
+														<button class="btn btn-primary btn-xs edit-btn" data-title="View" data-href="${contextPath}/company/viewemployee/${employee.id}">
 															<span class="glyphicon glyphicon-pencil"></span>
-														</button>
-													</p></td>
-												<td><p data-placement="top" data-toggle="tooltip"
-														title="Delete">
-														<button class="btn btn-danger btn-xs delete-btn" data-title="Delete" data-id="${listValue.jobId}">
-															<span class="glyphicon glyphicon-trash"></span>
 														</button>
 													</p></td>
 											</tr>
@@ -192,24 +196,42 @@
 									aria-hidden="true">
 									<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
 								</button>
-								<h4 class="modal-title custom_align" id="Heading">Edit The
-									Job Post</h4>
+								<h4 class="modal-title custom_align" id="Heading">View The
+									Employee</h4>
 							</div>
 
 
 							<div class="modal-body">
-								<form id="edit-form" method="POST" action="${contextPath}/company/editjob">
+								<form id="edit-form" method="POST" action="${contextPath}/company/contactemployee">
 									<input name="id" type="hidden"></input>
 									<div class="form-group">
-										<input name="title" type="text" class="form-control"></input> 
+										<input name="name" type="text" disabled class="form-control"></input> 
 									</div>
 									<div class="form-group">
-										<input name="description" type="text" class="form-control"></input>
+										<input name="surname" type="text" disabled class="form-control"></input>
+									</div>
+									<div class="form-group">
+										<input name="age" type="text" disabled class="form-control"></input> 
+									</div>
+									<div class="form-group">
+										<input name="experience" type="text" disabled class="form-control"></input>
+									</div>
+									<div class="form-group">
+										<input name="wanted" type="text" disabled class="form-control"></input> 
+									</div>
+									<div class="form-group">
+										<input name="education" type="text" disabled class="form-control"></input>
+									</div>
+									<div class="form-group">
+										<input name="current" type="text" disabled class="form-control"></input> 
+									</div>
+									<div class="form-group">
+										<input name="email" type="text" disabled class="form-control"></input>
 									</div>
 									<div class="modal-footer ">
 										<button type="submit" class="btn btn-warning btn-lg"
 											style="width: 100%;">
-											<span class="glyphicon glyphicon-ok-sign"></span> Update</button>
+											<span class="glyphicon glyphicon-ok-sign"></span> Contact</button>
 									</div>
 								</form>
 							</div>
@@ -222,54 +244,6 @@
 					</div>
 					<!-- /.modal-dialog -->
 				</div>
-
-
-
-				<div class="modal fade" id="delete" tabindex="-1" role="dialog"
-					aria-labelledby="edit" aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal"
-									aria-hidden="true">
-									<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-								</button>
-								<h4 class="modal-title custom_align" id="Heading">Delete
-									this entry</h4>
-							</div>
-							<div class="modal-body">
-
-								<div class="alert alert-danger">
-									<span class="glyphicon glyphicon-warning-sign"></span> Are you
-									sure you want to delete this Record?
-								</div>
-
-							</div>
-							<div class="modal-footer ">
-								<form id="delete-form" method="POST" action="${contextPath}/company/deletejob">
-									<input name="id" type="hidden"></input>
-									<button type="submit" class="btn btn-success">
-										<span class="glyphicon glyphicon-ok-sign"></span> Yes
-									</button>
-								</form>
-								<button type="button" class="btn btn-default"
-									data-dismiss="modal">
-									<span class="glyphicon glyphicon-remove"></span> No
-								</button>
-							</div>
-						</div>
-						<!-- /.modal-content -->
-					</div>
-					<!-- /.modal-dialog -->
-				</div>
-
-
-
-
-
-
-
-
 
 			</div>
 		</div>
@@ -298,11 +272,6 @@
 			});
 	});
 	
-	$('.delete-btn').on('click',function(){
-		var id = $(this).attr('data-id');
-		$('#delete-form :input[name="id"]').val(id);
-		$('#delete').modal({show:true});
-	});
 	</script>
 
 

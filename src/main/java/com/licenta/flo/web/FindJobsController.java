@@ -23,7 +23,7 @@ import com.licenta.flo.service.SecurityServiceImpl;
 import com.licenta.flo.service.UserServiceImpl;
 
 @Controller
-public class JobsController {
+public class FindJobsController {
 
 	@Autowired
 	private CompanyJobsService companyJobsService;

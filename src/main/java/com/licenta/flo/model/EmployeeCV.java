@@ -32,6 +32,8 @@ public class EmployeeCV {
 	private User user;
 	
 	private String jobTitle;
+	
+	private String email;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -115,6 +117,14 @@ public class EmployeeCV {
 
 	public void setJobTitle(String jobTitle) {
 		this.jobTitle = jobTitle;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 }

@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.licenta.flo.model.EmployeeCV;
 import com.licenta.flo.model.User;
 import com.licenta.flo.service.EmployeeCVService;
-import com.licenta.flo.service.SecurityServiceImpl;
-import com.licenta.flo.service.UserServiceImpl;
+import com.licenta.flo.service.SecurityService;
+import com.licenta.flo.service.UserService;
 
 @Controller
 public class EmployeeCVController {
@@ -22,10 +22,10 @@ public class EmployeeCVController {
 	private EmployeeCVService employeeCVService;
 
 	@Autowired
-	private UserServiceImpl userServiceImpl;
+	private UserService userService;
 
 	@Autowired
-	private SecurityServiceImpl securityServiceImpl;
+	private SecurityService securityService;
 
 	@RequestMapping(value = "employee/mycvemployee", method = RequestMethod.GET)
 	public String createOrEditCV(Model model) {
@@ -84,8 +84,8 @@ public class EmployeeCVController {
 	}
 
 	private User getUser() {
-		String username = securityServiceImpl.findLoggedInUsername();
-		return userServiceImpl.findByUsername(username);
+		String username = securityService.findLoggedInUsername();
+		return userService.findByUsername(username);
 	}
 
 }

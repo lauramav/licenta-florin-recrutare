@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.licenta.flo.model.CompanyJobs;
 import com.licenta.flo.model.User;
 import com.licenta.flo.service.CompanyJobsService;
-import com.licenta.flo.service.SecurityServiceImpl;
-import com.licenta.flo.service.UserServiceImpl;
+import com.licenta.flo.service.SecurityService;
+import com.licenta.flo.service.UserService;
 
 @Controller
 public class CompanyJobsController {
@@ -28,11 +28,11 @@ public class CompanyJobsController {
 	private CompanyJobsService companyJobsService;
 
 	@Autowired
-	private UserServiceImpl userServiceImpl;
+	private UserService userService;
 
 	@Autowired
-	private SecurityServiceImpl securityServiceImpl;
-
+	private SecurityService securityService;
+	
 	@RequestMapping(value = "company/newjob", method = RequestMethod.GET)
 	public String createJob(Model model) {
 		model.addAttribute("jobForm", new CompanyJobs());
@@ -93,8 +93,8 @@ public class CompanyJobsController {
 	}
 	
 	private User getUser() {
-		String username = securityServiceImpl.findLoggedInUsername();
-		return userServiceImpl.findByUsername(username);
+		String username = securityService.findLoggedInUsername();
+		return userService.findByUsername(username);
 	}
 
 }

@@ -29,12 +29,16 @@ public class RootController {
 		}
 
 		User loggedUser = userService.findByUsername(username);
+		
+		String role = loggedUser.getRole().getName();
 
-		if (loggedUser.getRole().getName().equalsIgnoreCase(Role.EMPLOYEE)) {
+		if (role.equalsIgnoreCase(Role.EMPLOYEE)) {
 			return "redirect:/employee/welcome";
-		} else {
+		} else if (role.equalsIgnoreCase(Role.COMPANY)) {
 			return "redirect:/company/welcome";
 		}
+		
+		return "redirect:/admin/welcome";
 
 	}
     

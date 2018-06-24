@@ -59,7 +59,7 @@
 		<div class="navbar navbar-inverse navbar-fixed-top">
 		
 		<font size="4" >
-          <a href="http://localhost:8080/resources/index.html" style="margin-left: 20px;">Back</a>
+          <a href="http://localhost:8080/company/welcome" style="margin-left: 20px;">Back</a>
         
           </font>
 		
@@ -99,19 +99,12 @@
 		<nav class="navbar-default navbar-side" role="navigation">
 			<div class="sidebar-collapse">
 				<ul class="nav" id="main-menu">
-
-
-
-					<li class="active-link"><a href="welcome"><i
-							class="fa fa-desktop "></i>Dashboard </a></li>
-
-
-					<li><a href="${contextPath}/company/newjob"><i class="fa fa-edit "></i>Post a new job </a></li>
+					<li class="active-link"><a href="welcome"><i class="fa fa-desktop "></i>Dashboard </a></li>
+					<li><a href="${contextPath}/company/newjob"><i class="fa fa-edit "></i>Post a new job</a></li>
 					<li><a href="${contextPath}/company/myjobs"><i class="fa fa-briefcase "></i>My posted jobs </a></li>
-
-
+					<li><a href="${contextPath}/company/hireemployee"><i class="fa fa-book"></i>Find employee </a></li>
 					<li><a href="FAQ.html"><i class="fa fa-question-circle "></i>FAQ</a></li>
-					<li><a href="#"><i class="fa fa-bar-chart-o"></i>Contact us </a></li>
+					<li><a href="#"><i class="fa fa-phone"></i>Contact us</a></li>
 				</ul>
 			</div>
 

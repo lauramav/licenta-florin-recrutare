@@ -1,5 +1,7 @@
 package com.licenta.flo.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +28,16 @@ public class EmployeeCVServiceImpl implements EmployeeCVService{
 	@Override
 	public EmployeeCV findByUser(User user) {
 		return employeeCVRepositories.findByUser(user);
+	}
+
+	@Override
+	public List<EmployeeCV> findAll() {
+		return employeeCVRepositories.findAll();
+	}
+
+	@Override
+	public EmployeeCV findById(Long id) {
+		return employeeCVRepositories.findById(id);
 	}
 	
 	
