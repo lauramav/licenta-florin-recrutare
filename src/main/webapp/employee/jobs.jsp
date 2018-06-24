@@ -1,6 +1,6 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
@@ -13,7 +13,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>My CV</title>
+<title>Find a job</title>
 
 
 <link href="../resources/css/bootstrap.min.css" rel="stylesheet">
@@ -43,7 +43,9 @@
 
 </head>
 <body>
- 
+
+
+
 
 	<div class="header-wrapper">
 		<div class="site-name">
@@ -55,13 +57,12 @@
 
 	<div id="wrapper">
 		<div class="navbar navbar-inverse navbar-fixed-top">
-		
-		<font size="4" >
-          <a href="http://localhost:8080/resources/index.html" style="margin-left: 20px;">Back</a>
-        
-          </font>
-		
-			<span class="logout-spn" align=right>
+
+			<font size="4"> <a
+				href="http://localhost:8080/resources/index.html"
+				style="margin-left: 20px;">Back</a>
+
+			</font> <span class="logout-spn" align=right>
 				<div class="container">
 					<c:if test="${pageContext.request.userPrincipal.name != null}">
 						<form id="logoutForm" method="POST"
@@ -106,110 +107,114 @@
 			</div>
 
 		</nav>
+		
 		<!-- /. NAV SIDE  -->
 		<div id="page-wrapper">
 			<div id="page-inner">
 				<div class="row">
 					<div class="col-md-12">
-						<h2 style = "margin-bottom: 20px;">My CV</h2>
-					</div>
-				</div>
-				
-				
-				<div class="row" style = "margin-bottom: 10px;">
-					<div class="col-md-3">
-						<label for="name">Name:</label>
-					</div>
-					<div class="col-md-5">
-				<form:form method="POST" action="${contextPath}/employee/mycvemployee"
-					modelAttribute="cvForm">
-					<spring:bind path="name">
-						<form:input type="text" path="name" class="form-control"
-							placeholder="Name"></form:input>
-					</spring:bind>
-					</div>
-				</div>
-				
-				
-				<div class="row" style = "margin-bottom: 10px;">
-					<div class="col-md-3">
-						<label for="surname">Surname:</label>
-					</div>
-					<div class="col-md-5">
-					<spring:bind path="surname">
-						<form:input type="text" path="surname" class="form-control"
-							placeholder="Surname"></form:input>
-					</spring:bind>
+						<h2 style="margin-left: 15px;">Posted jobs</h2>
 					</div>
 				</div>
 
 
-				<div class="row" style = "margin-bottom: 10px;">
-					<div class="col-md-3">
-						<label for="age">Age:</label>
-					</div>
-					<div class="col-md-5">				
-					<spring:bind path="age">
-						<form:input type="number" path="age" class="form-control"
-							placeholder="Age"></form:input>
-					</spring:bind>
-					</div>
-				</div>
-				
-				
-				<div class="row" style = "margin-bottom: 10px;">
-					<div class="col-md-3">
-						<label for="experience">Years of Experience:</label>
-					</div>
-					<div class="col-md-5">
-					<spring:bind path="experience">
-						<form:input type="number" path="experience" class="form-control"
-							placeholder="Years of experience"></form:input>
-					</spring:bind>
-					</div>
-				</div>
-				
-				<div class="row" style = "margin-bottom: 10px;">
-					<div class="col-md-3">
-						<label for="wanted">Job Wanted:</label>
-					</div>
-					<div class="col-md-5">
-				
-					<spring:bind path="wanted">
-						<form:input type="text" path="wanted" class="form-control"
-							placeholder="Wanted job"></form:input>
-					</spring:bind>
-					</div>
-				</div>
-	
-	
-				<div class="row" style = "margin-bottom: 10px;">
-					<div class="col-md-3">
-						<label for="education">Studies:</label>
-					</div>
-					<div class="col-md-5">
-					<spring:bind path="education">
-						<form:input type="text" path="education" class="form-control"
-							placeholder="Studies"></form:input>
-					</spring:bind>
+
+
+				<div class="container" style="margin-top: 20px;">
+					<div class="row">
+
+
+						<div class="col-md-10">
+							<div class="table-responsive">
+
+								<table id="mytable" class="table table-bordred table-striped">
+
+									<thead>
+										<th>Title</th>
+										<th>Description</th>
+										<th>View</th>
+										<th>Apply</th>
+									</thead>
+									<tbody>
+
+										<c:forEach var="listValue" items="${listOfJobs}">
+
+											<tr>
+
+												<td>${listValue.jobTitle}</td>
+												<td>${listValue.jobDescription}</td>
+
+												<td><p data-placement="top" data-toggle="tooltip"
+														title="View">
+														<button class="btn btn-primary btn-xs edit-btn" data-title="View" data-href="${contextPath}/employee/viewjob/${listValue.jobId}">
+															<span class="glyphicon glyphicon-pencil"></span>
+														</button>
+													</p></td>
+												<td><p data-placement="top" data-toggle="tooltip"
+														title="Apply">
+														<button class="btn btn-danger btn-xs delete-btn" data-title="Apply" data-href="${contextPath}/employee/applyjob/${listValue.jobTitle}">
+															<span class="glyphicon glyphicon-trash"></span>
+														</button>
+													</p></td>
+											</tr>
+										</c:forEach>
+
+
+									</tbody>
+
+								</table>
+
+								<div class="clearfix"></div>
+								<ul class="pagination pull-right">
+									<li class="disabled"><a href="#"><span
+											class="glyphicon glyphicon-chevron-left"></span></a></li>
+									<li class="active"><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#"><span
+											class="glyphicon glyphicon-chevron-right"></span></a></li>
+								</ul>
+
+							</div>
+
+						</div>
 					</div>
 				</div>
 
-				<div class="row" style = "margin-bottom: 10px;">
-					<div class="col-md-3">
-						<label for="current">Current Job:</label>
-					</div>
-					<div class="col-md-5">
-					<spring:bind path="current">
-						<form:input type="text" path="current" class="form-control"
-							placeholder="Current job"></form:input>
-					</spring:bind>
-					</div>
-				</div>
-					
 
-					<button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
-				</form:form>
+				<div class="modal fade" id="edit" tabindex="-1" role="dialog"
+					aria-labelledby="edit" aria-hidden="true"
+					style="padding-left: 70px">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"
+									aria-hidden="true">
+									<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+								</button>
+								<h4 class="modal-title custom_align" id="Heading">View The
+									Job Post</h4>
+							</div>
+
+
+							<div class="modal-body">
+									<input name="id" type="hidden"></input>
+									<div class="form-group">
+										<input name="title" type="text" disabled class="form-control"></input> 
+									</div>
+									<div class="form-group">
+										<textarea name="description" rows="4" cols="50" disabled class="form-control"></textarea>
+									</div>
+							</div>
+
+
+
+
+						</div>
+						<!-- /.modal-content -->
+					</div>
+					<!-- /.modal-dialog -->
+				</div>
 
 			</div>
 		</div>
@@ -225,6 +230,26 @@
 	<script src="../resources/assets/js/bootstrap.min.js"></script>
 	<!-- CUSTOM SCRIPTS -->
 	<script src="../resources/assets/js/custom.js"></script>
+	
+
+	<script>
+	$('.edit-btn').on('click',function(){
+		var dataURL = $(this).attr('data-href');
+		$.getJSON(dataURL, function(data) {
+			    for (var key in data) {
+			        $('#edit-form :input[name="'+key+'"]').val(data[key]);
+			    }
+			  	$('#edit').modal({show:true});
+			});
+	});
+	
+	$('.delete-btn').on('click',function(){
+		var dataURL = $(this).attr('data-href');
+		$(location).attr("href", dataURL);
+	});
+	
+	</script>
+
 
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

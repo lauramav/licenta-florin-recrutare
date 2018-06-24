@@ -13,6 +13,8 @@ public interface CompanyJobsService {
 	CompanyJobs findByTitle(String title);
 
 	List<CompanyJobs> findByUser(User user);
+	
+	List<CompanyJobs> findAll();
 
 	void delete(Long id);
 }

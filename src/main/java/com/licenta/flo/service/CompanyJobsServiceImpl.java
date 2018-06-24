@@ -37,6 +37,11 @@ public class CompanyJobsServiceImpl implements CompanyJobsService {
 	}
 	
 	@Override
+	public List<CompanyJobs> findAll() {
+		return companyJobsRepositories.findAll();
+	}
+	
+	@Override
 	public void delete(Long id) {
 		companyJobsRepositories.delete(findById(id));
 	}

@@ -13,7 +13,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>New Job</title>
+<title>Apply</title>
 
 
 <link href="../resources/css/bootstrap.min.css" rel="stylesheet">
@@ -43,9 +43,7 @@
 
 </head>
 <body>
-
  
-
 
 	<div class="header-wrapper">
 		<div class="site-name">
@@ -99,19 +97,11 @@
 		<nav class="navbar-default navbar-side" role="navigation">
 			<div class="sidebar-collapse">
 				<ul class="nav" id="main-menu">
-
-
-
-					<li class="active-link"><a href="welcome"><i
-							class="fa fa-desktop "></i>Dashboard </a></li>
-
-
-					<li><a href="${contextPath}/company/newjob"><i class="fa fa-edit "></i>Post a new job </a></li>
-					<li><a href="${contextPath}/company/myjobs"><i class="fa fa-briefcase "></i>My posted jobs </a></li>
-
-
+					<li class="active-link"><a href="welcome"><i class="fa fa-desktop "></i>Dashboard </a></li>
+					<li><a href="${contextPath}/employee/mycvemployee"><i class="fa fa-edit "></i>My CV </a></li>
+					<li><a href="${contextPath}/employee/jobs"><i class="fa fa-briefcase "></i>Find job </a></li>
 					<li><a href="FAQ.html"><i class="fa fa-question-circle "></i>FAQ</a></li>
-					<li><a href="#"><i class="fa fa-bar-chart-o"></i>Contact us </a></li>
+					<li><a href="#"><i class="fa fa-bar-chart-o"></i>Contact us</a></li>
 				</ul>
 			</div>
 
@@ -121,24 +111,117 @@
 			<div id="page-inner">
 				<div class="row">
 					<div class="col-md-12">
-						<h2 style="margin-bottom: 20px;">Post a New Job</h2>
+						<h2 style = "margin-bottom: 20px;">My CV</h2>
+					</div>
+				</div>
+				
+				
+				<form:form method="POST" action="${contextPath}/employee/applyemployee"
+					modelAttribute="cvForm">
+					
+				<div class="row" style = "margin-bottom: 10px;">
+					<div class="col-md-3">
+						<label for="jobTitle" style="color:blue;">Application for the Job:</label>
+					</div>
+					<div class="col-md-5">
+					<spring:bind path="current">
+						<form:input type="text" path="jobTitle" class="form-control"
+							placeholder="Job Title" style="color:blue;"></form:input>
+					</spring:bind>
+					</div>
+				</div>
+				
+				
+				<div class="row" style = "margin-bottom: 10px;">
+					<div class="col-md-3">
+						<label for="name">Name:</label>
+					</div>
+					<div class="col-md-5">
+					<spring:bind path="name">
+						<form:input type="text" path="name" class="form-control"
+							placeholder="Name"></form:input>
+					</spring:bind>
+					</div>
+				</div>
+				
+				
+				<div class="row" style = "margin-bottom: 10px;">
+					<div class="col-md-3">
+						<label for="surname">Surname:</label>
+					</div>
+					<div class="col-md-5">
+					<spring:bind path="surname">
+						<form:input type="text" path="surname" class="form-control"
+							placeholder="Surname"></form:input>
+					</spring:bind>
 					</div>
 				</div>
 
-				<form:form method="POST" action="${contextPath}/company/newjob"
-					modelAttribute="jobForm">
-					<spring:bind path="title">
-						<form:input type="text" path="title" class="form-control"
-							placeholder="Job Title" style="margin-bottom: 10px ;"></form:input>
-					</spring:bind>
 
-					<spring:bind path="description">
+				<div class="row" style = "margin-bottom: 10px;">
+					<div class="col-md-3">
+						<label for="age">Age:</label>
+					</div>
+					<div class="col-md-5">				
+					<spring:bind path="age">
+						<form:input type="number" path="age" class="form-control"
+							placeholder="Age"></form:input>
+					</spring:bind>
+					</div>
+				</div>
 				
-						<form:input type="text" rows="3" path="description" class="form-control"
-							placeholder="Job Description" style="margin-bottom: 20px;"></form:input>
+				
+				<div class="row" style = "margin-bottom: 10px;">
+					<div class="col-md-3">
+						<label for="experience">Years of Experience:</label>
+					</div>
+					<div class="col-md-5">
+					<spring:bind path="experience">
+						<form:input type="number" path="experience" class="form-control"
+							placeholder="Years of experience"></form:input>
 					</spring:bind>
+					</div>
+				</div>
+				
+				<div class="row" style = "margin-bottom: 10px;">
+					<div class="col-md-3">
+						<label for="wanted">Job Wanted:</label>
+					</div>
+					<div class="col-md-5">
+				
+					<spring:bind path="wanted">
+						<form:input type="text" path="wanted" class="form-control"
+							placeholder="Wanted job"></form:input>
+					</spring:bind>
+					</div>
+				</div>
+	
+	
+				<div class="row" style = "margin-bottom: 10px;">
+					<div class="col-md-3">
+						<label for="education">Studies:</label>
+					</div>
+					<div class="col-md-5">
+					<spring:bind path="education">
+						<form:input type="text" path="education" class="form-control"
+							placeholder="Studies"></form:input>
+					</spring:bind>
+					</div>
+				</div>
 
-					<button class="btn btn-lg btn-primary btn-block" type="submit" >Submit</button>
+				<div class="row" style = "margin-bottom: 10px;">
+					<div class="col-md-3">
+						<label for="current">Current Job:</label>
+					</div>
+					<div class="col-md-5">
+					<spring:bind path="current">
+						<form:input type="text" path="current" class="form-control"
+							placeholder="Current job"></form:input>
+					</spring:bind>
+					</div>
+				</div>
+				
+					<button class="btn btn-lg btn-primary btn-block" type="submit">Apply</button>
 				</form:form>
 
 			</div>

@@ -15,5 +15,7 @@ public interface CompanyJobsRepositories extends
 	CompanyJobs findByTitle(String title);
 
 	List<CompanyJobs> findByUser(User user);
+	
+	List<CompanyJobs> findAll();
 
 }
