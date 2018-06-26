@@ -57,7 +57,7 @@
 		<div class="navbar navbar-inverse navbar-fixed-top">
 		
 		<font size="4" >
-          <a href="http://localhost:8080/resources/index.html" style="margin-left: 20px;">Back</a>
+          <a href="welcome" style="margin-left: 20px;">Back</a>
         
           </font>
 		
@@ -108,37 +108,34 @@
 		</nav>
 		<!-- /. NAV SIDE  -->
 		<div id="page-wrapper">
-			<div id="page-inner">
-				<div class="row">
-					<div class="col-md-12">
-						<h2 style = "margin-bottom: 20px;">My CV</h2>
-					</div>
-				</div>
-				
+			<div id="page-inner">	
 				
 				<form:form method="POST" action="${contextPath}/employee/applyemployee"
 					modelAttribute="cvForm">
 					
 				<div class="row" style = "margin-bottom: 10px;">
-					<div class="col-md-3">
-						<label for="jobTitle" style="color:blue;">Application for the Job:</label>
+					<div class="col-md-3"><h3>
+						<label for="jobTitle" style="color:blue;">Application for the Job:</label></h3>
 					</div>
 					<div class="col-md-5">
 					<spring:bind path="current">
-						<form:input type="text" path="jobTitle" class="form-control"
+						<form:input type="text" disabled="true" path="jobTitle" class="form-control"
 							placeholder="Job Title" style="color:blue;"></form:input>
 					</spring:bind>
+					</div>
+					<div class="col-md-3">
+						<h4> * = Required</h4>
 					</div>
 				</div>
 				
 				
 				<div class="row" style = "margin-bottom: 10px;">
 					<div class="col-md-3">
-						<label for="name">Name:</label>
+						<label for="name">* Name:</label>
 					</div>
 					<div class="col-md-5">
 					<spring:bind path="name">
-						<form:input type="text" path="name" class="form-control"
+						<form:input type="text" required="required" path="name" class="form-control"
 							placeholder="Name"></form:input>
 					</spring:bind>
 					</div>
@@ -147,11 +144,11 @@
 				
 				<div class="row" style = "margin-bottom: 10px;">
 					<div class="col-md-3">
-						<label for="surname">Surname:</label>
+						<label for="surname">* Surname:</label>
 					</div>
 					<div class="col-md-5">
 					<spring:bind path="surname">
-						<form:input type="text" path="surname" class="form-control"
+						<form:input type="text" required="required" path="surname" class="form-control"
 							placeholder="Surname"></form:input>
 					</spring:bind>
 					</div>
@@ -160,11 +157,11 @@
 
 				<div class="row" style = "margin-bottom: 10px;">
 					<div class="col-md-3">
-						<label for="age">Age:</label>
+						<label for="age">* Age:</label>
 					</div>
 					<div class="col-md-5">				
 					<spring:bind path="age">
-						<form:input type="number" path="age" class="form-control"
+						<form:input type="number" required="required" path="age" class="form-control"
 							placeholder="Age"></form:input>
 					</spring:bind>
 					</div>
@@ -173,11 +170,11 @@
 				
 				<div class="row" style = "margin-bottom: 10px;">
 					<div class="col-md-3">
-						<label for="experience">Years of Experience:</label>
+						<label for="experience">* Years of Experience:</label>
 					</div>
 					<div class="col-md-5">
 					<spring:bind path="experience">
-						<form:input type="number" path="experience" class="form-control"
+						<form:input type="number" required="required" path="experience" class="form-control"
 							placeholder="Years of experience"></form:input>
 					</spring:bind>
 					</div>
@@ -199,11 +196,11 @@
 	
 				<div class="row" style = "margin-bottom: 10px;">
 					<div class="col-md-3">
-						<label for="education">Studies:</label>
+						<label for="education">* Studies:</label>
 					</div>
 					<div class="col-md-5">
 					<spring:bind path="education">
-						<form:input type="text" path="education" class="form-control"
+						<form:input type="text" required="required" path="education" class="form-control"
 							placeholder="Studies"></form:input>
 					</spring:bind>
 					</div>
@@ -223,17 +220,17 @@
 				
 				<div class="row" style = "margin-bottom: 10px;">
 					<div class="col-md-3">
-						<label for="email">Email:</label>
+						<label for="email">* Email:</label>
 					</div>
 					<div class="col-md-5">
 					<spring:bind path="email">
-						<form:input type="text" path="email" class="form-control"
+						<form:input type="text" required="required" path="email" class="form-control"
 							placeholder="Email"></form:input>
 					</spring:bind>
 					</div>
 				</div>
 				
-					<button class="btn btn-lg btn-primary btn-block" type="submit">Apply</button>
+					<button class="btn btn-lg btn-danger btn-block" style="color: white" type="submit">Apply</button>
 				</form:form>
 
 			</div>

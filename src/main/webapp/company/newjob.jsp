@@ -121,13 +121,13 @@
 				<form:form method="POST" action="${contextPath}/company/newjob"
 					modelAttribute="jobForm">
 					<spring:bind path="title">
-						<form:input type="text" path="title" class="form-control"
+						<form:input type="text" required="required" path="title" class="form-control"
 							placeholder="Job Title" style="margin-bottom: 10px ;"></form:input>
 					</spring:bind>
 
 					<spring:bind path="description">
 				
-						<form:input type="text" rows="3" path="description" class="form-control"
+						<form:input type="text" required="required" rows="3" path="description" class="form-control"
 							placeholder="Job Description" style="margin-bottom: 20px;"></form:input>
 					</spring:bind>
 

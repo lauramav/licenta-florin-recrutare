@@ -201,10 +201,10 @@
 								<form id="edit-form" method="POST" action="${contextPath}/company/editjob">
 									<input name="id" type="hidden"></input>
 									<div class="form-group">
-										<input name="title" type="text" class="form-control"></input> 
+										<input name="title" required="required" type="text" class="form-control"></input> 
 									</div>
 									<div class="form-group">
-										<input name="description" type="text" class="form-control"></input>
+										<input name="description" required="required" type="text" class="form-control"></input>
 									</div>
 									<div class="modal-footer ">
 										<button type="submit" class="btn btn-warning btn-lg"
@@ -251,11 +251,11 @@
 									<button type="submit" class="btn btn-success">
 										<span class="glyphicon glyphicon-ok-sign"></span> Yes
 									</button>
-								</form>
+								
 								<button type="button" class="btn btn-default"
 									data-dismiss="modal">
 									<span class="glyphicon glyphicon-remove"></span> No
-								</button>
+								</button></form>
 							</div>
 						</div>
 						<!-- /.modal-content -->

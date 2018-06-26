@@ -91,10 +91,14 @@
 		<nav class="navbar-default navbar-side" role="navigation">
 			<div class="sidebar-collapse">
 				<ul class="nav" id="main-menu">
-					<li class="active-link"><a href="welcome"><i class="fa fa-desktop "></i>Dashboard </a></li>
-					<li><a href="${contextPath}/company/newjob"><i class="fa fa-edit "></i>Post a new job</a></li>
-					<li><a href="${contextPath}/company/myjobs"><i class="fa fa-briefcase "></i>My posted jobs </a></li>
-					<li><a href="${contextPath}/company/hireemployee"><i class="fa fa-book"></i>Find employee </a></li>
+					<li class="active-link"><a href="welcome"><i
+							class="fa fa-desktop "></i>Dashboard </a></li>
+					<li><a href="${contextPath}/company/newjob"><i
+							class="fa fa-edit "></i>Post a new job</a></li>
+					<li><a href="${contextPath}/company/myjobs"><i
+							class="fa fa-briefcase "></i>My posted jobs </a></li>
+					<li><a href="${contextPath}/company/hireemployee"><i
+							class="fa fa-book"></i>Find employee </a></li>
 					<li><a href="FAQ.html"><i class="fa fa-question-circle "></i>FAQ</a></li>
 					<li><a href="#"><i class="fa fa-phone"></i>Contact us</a></li>
 				</ul>
@@ -115,17 +119,17 @@
 					<div class="col-lg-12 ">
 						<div class="alert alert-info">
 							<strong>Welcome
-								${pageContext.request.userPrincipal.name} ! </strong> 
+								${pageContext.request.userPrincipal.name} ! </strong>
 						</div>
 
 					</div>
 				</div>
 				<!-- /. ROW  -->
 				<div class="row text-center pad-top">
-					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 						<div class="div-square">
 							<a href="http://localhost:8080/resources/index.html"> <i
-								class="fa fa-home fa-5x"></i>
+								class="fa fa-home fa-6x"></i>
 								<h4>Home</h4>
 							</a>
 						</div>
@@ -133,33 +137,35 @@
 
 					</div>
 
-					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 						<div class="div-square">
 							<a href="${contextPath}/company/newjob"> <i
-								class="fa fa-edit fa-5x"></i>
+								class="fa fa-edit fa-6x"></i>
 								<h4>Post a new Job</h4>
 							</a>
 						</div>
 
 
 					</div>
-					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 						<div class="div-square">
-							<a href="myjobs"> <i class="fa fa-briefcase fa-5x"></i>
+							<a href="myjobs"> <i class="fa fa-briefcase fa-6x"></i>
 								<h4>My Posted Jobs</h4>
 							</a>
 						</div>
 					</div>
-					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+				</div>
+				<div class="row text-center pad-top">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 						<div class="div-square">
-							<a href="hireemployee"> <i class="fa fa-book fa-5x"></i>
+							<a href="hireemployee"> <i class="fa fa-book fa-6x"></i>
 								<h4>Find employee</h4>
 							</a>
 						</div>
 					</div>
-					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 						<div class="div-square">
-							<a href="FAQ.html"> <i class="fa fa-question-circle fa-5x"></i>
+							<a href="FAQ.html"> <i class="fa fa-question-circle fa-6x"></i>
 								<h4>FAQ</h4>
 							</a>
 						</div>
@@ -167,9 +173,9 @@
 
 					</div>
 
-					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 						<div class="div-square">
-							<a href="form.html"> <i class="fa fa-phone fa-5x"></i>
+							<a href="form.html"> <i class="fa fa-phone fa-6x"></i>
 								<h4>Contact us!</h4>
 							</a>
 						</div>

@@ -32,7 +32,7 @@ body {
 	margin: -15px 20px 10px 0px;
 	background-color: #fff !important;
 	padding: 10px;
-	min-height: 1050px;
+	
 }
 
 .pad-top {
@@ -135,7 +135,7 @@ body {
 	#page-wrapper {
 		margin: 0 0 0 260px;
 		padding: 15px 30px;
-		min-height: 1050px;
+		
 	}
 	.navbar-side {
 		z-index: 1;

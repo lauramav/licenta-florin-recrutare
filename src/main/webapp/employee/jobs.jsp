@@ -59,8 +59,7 @@
 		<div class="navbar navbar-inverse navbar-fixed-top">
 
 			<font size="4"> <a
-				href="http://localhost:8080/resources/index.html"
-				style="margin-left: 20px;">Back</a>
+				href="welcome" style="margin-left: 20px;">Back</a>
 
 			</font> <span class="logout-spn" align=right>
 				<div class="container">
@@ -124,7 +123,7 @@
 					<div class="row">
 
 
-						<div class="col-md-10">
+						<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
 							<div class="table-responsive">
 
 								<table id="mytable" class="table table-bordred table-striped">
@@ -147,13 +146,13 @@
 												<td><p data-placement="top" data-toggle="tooltip"
 														title="View">
 														<button class="btn btn-primary btn-xs edit-btn" data-title="View" data-href="${contextPath}/employee/viewjob/${listValue.jobId}">
-															<span class="glyphicon glyphicon-pencil"></span>
+															<span class="glyphicon glyphicon-user"></span>
 														</button>
 													</p></td>
 												<td><p data-placement="top" data-toggle="tooltip"
 														title="Apply">
 														<button class="btn btn-danger btn-xs delete-btn" data-title="Apply" data-href="${contextPath}/employee/applyjob/${listValue.jobTitle}">
-															<span class="glyphicon glyphicon-trash"></span>
+															<span class="glyphicon glyphicon-file"></span>
 														</button>
 													</p></td>
 											</tr>
