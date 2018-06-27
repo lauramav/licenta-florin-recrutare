@@ -97,11 +97,17 @@
 		<nav class="navbar-default navbar-side" role="navigation">
 			<div class="sidebar-collapse">
 				<ul class="nav" id="main-menu">
-					<li class="active-link"><a href="welcome"><i class="fa fa-desktop "></i>Dashboard </a></li>
-					<li><a href="${contextPath}/employee/mycvemployee"><i class="fa fa-edit "></i>My CV </a></li>
-					<li><a href="${contextPath}/employee/jobs"><i class="fa fa-briefcase "></i>Find job </a></li>
-					<li><a href="FAQ.html"><i class="fa fa-question-circle "></i>FAQ</a></li>
-					<li><a href="#"><i class="fa fa-bar-chart-o"></i>Contact us</a></li>
+					<li class="active-link"><a href="welcome"><i
+							class="fa fa-desktop "></i>Dashboard </a></li>
+
+					<li><a href="${contextPath}/employee/mycvemployee"><i
+							class="fa fa-edit "></i>My CV </a></li>
+					<li><a href="${contextPath}/employee/jobs"><i
+							class="fa fa-briefcase "></i>Find job </a></li>
+
+					<li><a href="FAQ.html"><i class="fa fa-question-circle "></i>FAQ</a>
+					</li>
+					<li><a href="contactus.html"><i class="fa fa-phone"></i>Contact us</a></li>
 				</ul>
 			</div>
 
@@ -216,7 +222,7 @@
 					</div>
 					<div class="col-md-5">
 					<spring:bind path="email">
-						<form:input type="text" required="required" path="email" class="form-control"
+						<form:input type="email" required="required" path="email" class="form-control"
 							placeholder="Email"></form:input>
 					</spring:bind>
 					</div>

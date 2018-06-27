@@ -103,7 +103,7 @@
 
 					<li><a href="FAQ.html"><i class="fa fa-question-circle "></i>FAQ</a>
 					</li>
-					<li><a href="#"><i class="fa fa-phone"></i>Contact us</a></li>
+					<li><a href="contactus.html"><i class="fa fa-phone"></i>Contact us</a></li>
 				</ul>
 			</div>
 		</nav>
