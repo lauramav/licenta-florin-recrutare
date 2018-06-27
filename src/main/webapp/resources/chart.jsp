@@ -1,56 +1,68 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page import="java.util.*,java.sql.*"%>
+<%@ page import="com.google.gson.Gson"%>
+<%@ page import="com.google.gson.JsonObject"%>
+
+<%
+	Gson gsonObj = new Gson();
+	Map<Object, Object> map = null;
+	List<Map<Object, Object>> list = new ArrayList<Map<Object, Object>>();
+	String dataPoints = null;
+
+//	try {
+		Class.forName("com.mysql.jdbc.Driver");
+		Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/dblicenta?autoReconnect=true&useSSL=false","root","root");
+	//	Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/dblicenta", "root","root");
+		Statement statement = connection.createStatement();
+		String xVal, yVal;
+
+		ResultSet resultSet = statement.executeQuery("select * from test1");
+
+		while (resultSet.next()) {
+			xVal = resultSet.getString("x");
+			yVal = resultSet.getString("y");
+			map = new HashMap<Object, Object>();
+			map.put("x", Double.parseDouble(xVal));
+			map.put("y", Double.parseDouble(yVal));
+			list.add(map);
+			dataPoints = gsonObj.toJson(list);
+		}
+		connection.close();
+	//} catch (SQLException e) {
+//		out.println(
+	//			"<div  style='width: 50%; margin-left: auto; margin-right: auto; margin-top: 200px;'>Could not connect to the database. Please check if you have mySQL Connector installed on the machine - if not, try installing the same.</div>");
+//		dataPoints = null;
+//	}
+%>
+
+<!DOCTYPE HTML>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript">
-window.onload = function() {
- 
-var dps = [[]];
-<c:if test="${error == null}">
-var chart = new CanvasJS.Chart("chartContainer", {
-	theme: "light2", // "light1", "dark1", "dark2"
-	animationEnabled: true,
-	title: {
-		text: "Column Chart from Database"
-	},
-	data: [{
-		type: "column",
-		dataPoints: dps[0]
-	}]
-});
-</c:if>
- 
-var xValue;
-var yValue;
- 
-<c:forEach items="${dataPointsList}" var="dataPoints" varStatus="loop">	
-	<c:forEach items="${dataPoints}" var="dataPoint">
-		xValue = parseInt("${dataPoint.x}");
-		yValue = parseFloat("${dataPoint.y}");
-		dps[parseInt("${loop.index}")].push({
-			x : xValue,
-			y : yValue,
-		});		
-	</c:forEach>	
-</c:forEach> 
- 
-<c:if test="${error == null}">
-chart.render();
-</c:if>
- 
-}
+	window.onload = function() {
+<%if (dataPoints != null) {%>
+	var chart = new CanvasJS.Chart("chartContainer", {
+			animationEnabled : true,
+			exportEnabled : true,
+			title : {
+				text : "JSP Column Chart from Database"
+			},
+			data : [ {
+				type : "column", //change type to bar, line, area, pie, etc
+				dataPoints :
+<%out.print(dataPoints);%>
+	} ]
+		});
+		chart.render();
+<%}%>
+	}
 </script>
 </head>
 <body>
-	<c:if test="${error != null}">
-	<div  style='width: 50%; margin-left: auto; margin-right: auto; margin-top: 200px; text-align: center;'>${error}</div>
-	</c:if>
-	<c:if test="${error == null}">
 	<div id="chartContainer" style="height: 370px; width: 100%;"></div>
-	</c:if>
 	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </body>
-</html>                              
+</html>
+
