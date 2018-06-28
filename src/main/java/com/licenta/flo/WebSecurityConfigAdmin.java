@@ -26,7 +26,6 @@ public class WebSecurityConfigAdmin extends WebSecurityConfigurerAdapter {
         http.csrf().disable()
         		.antMatcher("/admin/**")
                 .authorizeRequests()
-                	.antMatchers("/admin/registration").permitAll()
                     .anyRequest().hasAuthority("admin")
                     .and()
                 .formLogin()

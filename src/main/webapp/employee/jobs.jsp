@@ -204,6 +204,7 @@
 
 
 							<div class="modal-body">
+								<form id="edit-form">
 									<input name="id" type="hidden"></input>
 									<div class="form-group">
 										<input name="title" type="text" disabled="true" class="form-control"></input> 
@@ -211,6 +212,7 @@
 									<div class="form-group">
 										<textarea name="description" rows="4" cols="50" disabled="true" class="form-control"></textarea>
 									</div>
+								</form>
 							</div>
 
 
