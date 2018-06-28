@@ -1,6 +1,5 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 
 <!DOCTYPE html>
@@ -104,6 +103,7 @@
 					<li><a href="FAQ.html"><i class="fa fa-question-circle "></i>FAQ</a>
 					</li>
 					<li><a href="contactus.html"><i class="fa fa-phone"></i>Contact us</a></li>
+					<li><a href="chart.jsp"><i class="fa fa-bar-chart-o"></i>Statistics</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -174,12 +174,17 @@
 
 					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 						<div class="div-square">
-							<a href="form.html"> <i class="fa fa-phone fa-6x"></i>
+							<a href="contactus.html"> <i class="fa fa-phone fa-6x"></i>
 								<h4>Contact us!</h4>
 							</a>
 						</div>
-
-
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+						<div class="div-square">
+							<a href="chart.jsp"> <i class="fa fa-bar-chart-o fa-6x"></i>
+								<h4>Statistics</h4>
+							</a>
+						</div>
 					</div>
 
 				</div>

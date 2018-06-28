@@ -100,7 +100,9 @@
 					<li><a href="${contextPath}/company/hireemployee"><i
 							class="fa fa-book"></i>Find employee </a></li>
 					<li><a href="FAQ.html"><i class="fa fa-question-circle "></i>FAQ</a></li>
-					<li><a href="contactus.html"><i class="fa fa-phone"></i>Contact us</a></li>
+					<li><a href="contactus.html"><i class="fa fa-phone"></i>Contact
+							us</a></li>
+					<li><a href="chart.jsp"><i class="fa fa-bar-chart-o"></i>Statistics</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -154,7 +156,16 @@
 							</a>
 						</div>
 					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+						<div class="div-square">
+							<a href="chart.jsp"> <i class="fa fa-bar-chart-o fa-6x"></i>
+								<h4>Statistics</h4>
+							</a>
+						</div>
+					</div>
+				
 				</div>
+				
 				<div class="row text-center pad-top">
 					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 						<div class="div-square">
@@ -175,7 +186,7 @@
 
 					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 						<div class="div-square">
-							<a href="form.html"> <i class="fa fa-phone fa-6x"></i>
+							<a href="contactus.html"> <i class="fa fa-phone fa-6x"></i>
 								<h4>Contact us!</h4>
 							</a>
 						</div>
@@ -183,6 +194,8 @@
 
 					</div>
 				</div>
+
+					
 
 				<!-- /. ROW  -->
 			</div>

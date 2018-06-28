@@ -108,6 +108,7 @@
 					<li><a href="FAQ.html"><i class="fa fa-question-circle "></i>FAQ</a>
 					</li>
 					<li><a href="contactus.html"><i class="fa fa-phone"></i>Contact us</a></li>
+					<li><a href="chart.jsp"><i class="fa fa-bar-chart-o"></i>Statistics</a></li>
 				</ul>
 			</div>
 
@@ -205,10 +206,10 @@
 							<div class="modal-body">
 									<input name="id" type="hidden"></input>
 									<div class="form-group">
-										<input name="title" type="text" disabled class="form-control"></input> 
+										<input name="title" type="text" disabled="true" class="form-control"></input> 
 									</div>
 									<div class="form-group">
-										<textarea name="description" rows="4" cols="50" disabled class="form-control"></textarea>
+										<textarea name="description" rows="4" cols="50" disabled="true" class="form-control"></textarea>
 									</div>
 							</div>
 

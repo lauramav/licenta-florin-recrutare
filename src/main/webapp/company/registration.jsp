@@ -59,13 +59,8 @@
         <div class="row">
 		 <div class="col-md-6">
             <div class="block">
-              <img src="../resources/img/loginCompany.png" alt="" class="img-spacing thumbnail">
-              <h1>Why choose to use our recruiting service? </h1>
-              <p>text
-              </p>
-              <p> text
-              </p>
-            
+                <p></p>
+              <img src="../resources/img/loginCompany.png" alt="" class="img-spacing thumbnail">           
             </div>            
           </div>
           <div class="col-md-6">

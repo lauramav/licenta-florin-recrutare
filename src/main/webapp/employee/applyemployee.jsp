@@ -108,6 +108,7 @@
 					<li><a href="FAQ.html"><i class="fa fa-question-circle "></i>FAQ</a>
 					</li>
 					<li><a href="contactus.html"><i class="fa fa-phone"></i>Contact us</a></li>
+					<li><a href="chart.jsp"><i class="fa fa-bar-chart-o"></i>Statistics</a></li>
 				</ul>
 			</div>
 

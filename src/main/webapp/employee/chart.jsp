@@ -105,7 +105,7 @@
 
 <div class="navbar navbar-inverse navbar-fixed-top" style="padding-top: 10px; padding-left: 10px">
 <font size="4" >
-	 <a href="index.html">Back</a>
+	 <a href="welcome">Back</a>
 	 </font>
 	 
 </div>  
