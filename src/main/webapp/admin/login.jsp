@@ -42,7 +42,7 @@
 	
 
 		<c:if test="${pageContext.request.userPrincipal.name != null}">
-			<c:redirect url = "http://localhost:8080/company/welcome"/>
+			<c:redirect url = "http://localhost:8080/admin/welcome"/>
 		</c:if>
 	
 </head>
